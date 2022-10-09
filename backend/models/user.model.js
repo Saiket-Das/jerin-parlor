@@ -4,7 +4,10 @@ const userSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      require: true,
+      require: [true, "Please provide a name"],
+      trim: true,
+      minLength: [3, "Name must be at least 3 characters"],
+      maxLength: [100, "Name is too large"],
     },
 
     email: {
@@ -12,7 +15,34 @@ const userSchema = mongoose.Schema(
       require: true,
       unique: true,
     },
-    photo: {
+
+    password: {
+      type: String,
+      required: [true, "Password is required"],
+      validate: {
+        validator: (value) =>
+          validator.isStrongPassword(value, {
+            minLength: 6,
+            minLowercase: 1,
+            minUppercase: 1,
+            minNumbers: 3,
+            minSymbols: 1,
+          }),
+        message: "Your password too week",
+      },
+    },
+    confirmPassword: {
+      type: String,
+      required: [true, "Please confirm your password"],
+      validate: {
+        validator: function (value) {
+          return value === this.password;
+        },
+        message: "Password doesn't match!",
+      },
+    },
+
+    imageURL: {
       type: String,
       require: true,
       default:
@@ -20,7 +50,15 @@ const userSchema = mongoose.Schema(
     },
     role: {
       type: String,
+      enum: ["user", "admin"],
       default: "user",
+    },
+    contactNumber: {
+      type: String,
+      validate: [
+        validator.isMobilePhone,
+        "Please provide a valid contact number",
+      ],
     },
   },
   {
@@ -29,10 +67,20 @@ const userSchema = mongoose.Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  if (!this.isModified) {
-    next();
+  if (!this.isModified("password")) {
+    return next();
   }
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  this.confirmPassword = undefined;
+
+  next();
 });
+
+userSchema.methods.comparePassword = function (password, hash) {
+  const isPassowrdValid = bcrypt.compareSync(password, hash);
+  return isPassowrdValid;
+};
 
 const User = mongoose.model("User", userSchema);
 
