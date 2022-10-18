@@ -12,39 +12,42 @@ const bookingSchema = mongoose.Schema(
         type: String,
         required: true,
       },
+      contactNumber: String,
     },
+
     serviceName: {
-      type: String,
-      require: true,
+      id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Service",
+        required: true,
+      },
+      name: {
+        type: String,
+        required: true,
+      },
     },
+
     date: {
       type: String,
-      require: true,
+      require: [true, "Please select a date"],
+      default: Date.now,
     },
+
     slot: {
       type: String,
       require: true,
     },
+
     price: {
       type: String,
       require: true,
       unique: true,
-    },
-    phoneNumber: {
-      type: String,
-      require: true,
     },
   },
   {
     timestamps: true,
   }
 );
-
-bookingSchema.pre("save", async function (next) {
-  if (!this.isModified) {
-    next();
-  }
-});
 
 const Booking = mongoose.model("Booking", bookingSchema);
 
