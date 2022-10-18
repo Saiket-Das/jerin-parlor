@@ -13,6 +13,7 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       require: true,
+      trim: true,
       unique: true,
     },
 
@@ -44,13 +45,12 @@ const userSchema = mongoose.Schema(
 
     imageURL: {
       type: String,
-      require: true,
       default:
         "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/344/external-user-user-tanah-basah-glyph-tanah-basah-7.png",
     },
     role: {
       type: String,
-      enum: ["user", "admin"],
+      enum: ["user", "staff", "admin"],
       default: "user",
     },
     contactNumber: {
