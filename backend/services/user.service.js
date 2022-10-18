@@ -13,3 +13,9 @@ exports.findUserByEmail = async (email) => {
 
   return result;
 };
+
+// -------> Get me
+exports.findUserById = async (userId) => {
+  const result = await User.findById(userId);
+  return result;
+};

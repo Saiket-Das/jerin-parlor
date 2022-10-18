@@ -8,7 +8,8 @@ router.post("/signup", userController.register);
 
 router.post("/login", userController.login);
 
-// router.route("/me").get(verifyToken, userController.getMe);
+router.route("/me").get(verifyToken, userController.getMe);
+
 // router
 //   .route("/profile-update")
 //   .patch(verifyToken, userController.userProfileUpdate);
