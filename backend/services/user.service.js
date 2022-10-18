@@ -6,7 +6,7 @@ exports.registerService = async (userInfo) => {
   return result;
 };
 
-// -------> Login
+// -------> Find user by email
 exports.findUserByEmail = async (email) => {
   const result = await User.findOne({ email });
   console.log(result);
@@ -14,8 +14,15 @@ exports.findUserByEmail = async (email) => {
   return result;
 };
 
-// -------> Get me
+// -------> Find user by Id
 exports.findUserById = async (userId) => {
   const result = await User.findById(userId);
+  return result;
+};
+
+exports.userProfileUpdateService = async (userId, updateInfo) => {
+  const result = await User.findByIdAndUpdate({ _id: userId }, updateInfo, {
+    runValidators: true,
+  });
   return result;
 };

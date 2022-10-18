@@ -10,8 +10,8 @@ router.post("/login", userController.login);
 
 router.route("/me").get(verifyToken, userController.getMe);
 
-// router
-//   .route("/profile-update")
-//   .patch(verifyToken, userController.userProfileUpdate);
+router
+  .route("/profile-update")
+  .patch(verifyToken, userController.userProfileUpdate);
 
 module.exports = router;

@@ -1,6 +1,7 @@
 const {
   registerService,
   findUserByEmail,
+  userProfileUpdateService,
 } = require("../services/user.service");
 const { generateToken } = require("../utilis/token");
 
@@ -82,6 +83,25 @@ exports.getMe = async (req, res, next) => {
       success: true,
       message: "Successfully get logged in user info",
       data: user,
+    });
+  } catch (error) {
+    res.status(400).send({
+      success: false,
+      message: "Something went wrong",
+      error: error.message,
+    });
+  }
+};
+
+// -------> Update user info
+exports.userProfileUpdate = async (req, res, next) => {
+  try {
+    const result = await userProfileUpdateService(req.user.id, req.body);
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully update user info",
+      data: result,
     });
   } catch (error) {
     res.status(400).send({
