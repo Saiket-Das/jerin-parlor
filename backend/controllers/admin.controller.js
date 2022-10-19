@@ -1,4 +1,7 @@
-const { assignAdminService } = require("../services/admin.service");
+const {
+  assignAdminService,
+  assignStaffService,
+} = require("../services/admin.service");
 
 // ---------> MAKE ADMIN
 exports.assignAdmin = async (req, res) => {
