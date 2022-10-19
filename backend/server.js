@@ -13,9 +13,11 @@ app.use(express.json());
 dbConnection();
 
 const userRoutes = require("./routes/user.route");
+const adminRoutes = require("./routes/admin.route");
 
 // Routes
 app.use("/api/user", userRoutes);
+app.use("/api/admin", adminRoutes);
 
 app.get("/", (req, res) => {
   res.send("Jerin Parlour is running");

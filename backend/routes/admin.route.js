@@ -5,11 +5,11 @@ const verifyToken = require("../middlewares/verifyToken");
 const authorization = require("../middlewares/authorization");
 
 router
-  .route("/assignAdmin/:id")
+  .route("/assign-admin/:id")
   .patch(verifyToken, adminController.assignAdmin);
 
 router
-  .route("/assignManager/:id")
+  .route("/assign-staff/:id")
   .patch(verifyToken, adminController.assignStaff);
 
 module.exports = router;

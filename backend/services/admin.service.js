@@ -11,7 +11,6 @@ exports.assignAdminService = async (id) => {
 };
 
 // ---------> MAKE STAFF
-
 exports.assignStaffService = async (id) => {
   const result = await User.updateOne(
     { _id: id },
