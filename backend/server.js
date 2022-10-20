@@ -15,11 +15,13 @@ dbConnection();
 const authRoutes = require("./routes/auth.route");
 const adminRoutes = require("./routes/admin.route");
 const serviceRoutes = require("./routes/service.route");
+const reviewRoutes = require("./routes/review.route");
 
 // ------> Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/service", serviceRoutes);
+app.use("/api/review", reviewRoutes);
 
 app.get("/", (req, res) => {
   res.send("Jerin Parlour is running");
