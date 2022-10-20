@@ -23,13 +23,11 @@ const serviceSchema = mongoose.Schema(
       required: [true, "Please provide service's price"],
     },
 
-    imageURL: [
-      {
-        type: String,
-        required: true,
-        validate: [validator.isURL, "You provide a wrong url"],
-      },
-    ],
+    imageURL: {
+      type: String,
+      required: true,
+      validate: [validator.isURL, "You provide a wrong url"],
+    },
   },
   {
     timestamps: true,

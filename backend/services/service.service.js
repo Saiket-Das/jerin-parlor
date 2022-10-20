@@ -14,8 +14,20 @@ exports.createServiceService = async (serviceInfo) => {
   return result;
 };
 
-// -------> Find service by Id
-exports.getServiceByIdService = async (userId) => {
-  const result = await Service.findById(userId);
+// -------> Find a service by Id
+exports.getServiceByIdService = async (serviceId) => {
+  const result = await Service.findById(serviceId);
+  return result;
+};
+
+// -------> Update a service by Id
+exports.updateServiceByIdService = async (serviceId, updateInfo) => {
+  const result = await Service.findByIdAndUpdate(
+    { _id: serviceId },
+    updateInfo,
+    {
+      runValidators: true,
+    }
+  );
   return result;
 };

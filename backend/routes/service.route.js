@@ -9,7 +9,13 @@ router
   .get(serviceController.getAllService)
   .post(verifyToken, authorization("admin"), serviceController.createService);
 
-router.route("/:id").get(serviceController.getServiceById);
-//   .patch(verifyToken, authorization("admin"), serviceController.assignStaff);
+router
+  .route("/:id")
+  .get(serviceController.getServiceById)
+  .patch(
+    verifyToken,
+    authorization("admin"),
+    serviceController.updateServiceById
+  );
 
 module.exports = router;
