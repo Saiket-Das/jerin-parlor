@@ -7,7 +7,7 @@ const serviceSchema = mongoose.Schema(
       type: String,
       require: [true, "Please provide service name"],
       trim: true,
-      lowercase: true,
+      unique: true,
       minLength: [3, "Service name must be at least 3 characters"],
       maxLength: [150, "Service name is too large"],
     },

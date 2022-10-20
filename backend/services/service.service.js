@@ -13,3 +13,9 @@ exports.createServiceService = async (serviceInfo) => {
 
   return result;
 };
+
+// -------> Find service by Id
+exports.getServiceByIdService = async (userId) => {
+  const result = await Service.findById(userId);
+  return result;
+};

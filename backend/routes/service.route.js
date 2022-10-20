@@ -9,8 +9,7 @@ router
   .get(serviceController.getAllService)
   .post(verifyToken, authorization("admin"), serviceController.createService);
 
-// router
-//   .route("/assign-staff/:id")
+router.route("/:id").get(serviceController.getServiceById);
 //   .patch(verifyToken, authorization("admin"), serviceController.assignStaff);
 
 module.exports = router;
