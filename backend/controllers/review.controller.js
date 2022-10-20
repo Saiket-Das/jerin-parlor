@@ -2,6 +2,7 @@ const {
   getAllReviewService,
   createReviewService,
   updateReviewByIdService,
+  deleteReviewByIdService,
 } = require("../services/review.service");
 
 // -------> Get all reviews
@@ -42,7 +43,7 @@ exports.createReview = async (req, res, next) => {
   }
 };
 
-// -------> Create a new review
+// -------> Update a review by poster
 exports.updateReviewById = async (req, res, next) => {
   try {
     const review = await updateReviewByIdService(
@@ -54,6 +55,25 @@ exports.updateReviewById = async (req, res, next) => {
     res.status(200).json({
       success: true,
       message: "Successfully update a review by Id",
+      data: review,
+    });
+  } catch (error) {
+    res.status(400).send({
+      success: false,
+      message: "Something went wrong",
+      error: error.message,
+    });
+  }
+};
+
+// -------> Delete a review by poster
+exports.deleteReviewById = async (req, res, next) => {
+  try {
+    const review = await deleteReviewByIdService(req.params.id, req.user.email);
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully delete a review by Id",
       data: review,
     });
   } catch (error) {

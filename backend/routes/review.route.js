@@ -11,12 +11,11 @@ router
 
 router
   .route("/:id")
-  // .get(reviewController.getById); // Get a service by Id
-  .patch(verifyToken, authorization("user"), reviewController.updateReviewById); // Update a service by Id
-//   .delete(
-//     verifyToken,
-//     authorization("admin"),
-//     serviceController.deleteServiceById
-//   ); // Delete a service by Id
+  .patch(verifyToken, authorization("user"), reviewController.updateReviewById) // Update a review by Id
+  .delete(
+    verifyToken,
+    authorization("user"),
+    reviewController.deleteReviewById
+  ); // Delete a review by Id
 
 module.exports = router;
