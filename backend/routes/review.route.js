@@ -6,17 +6,13 @@ const authorization = require("../middlewares/authorization");
 
 router
   .route("/")
-  .get(reviewController.getAllReview) // Get all services
-  .post(verifyToken, authorization("user"), reviewController.createReview); // Create a new service
+  .get(reviewController.getAllReview) // Get all reviews
+  .post(verifyToken, authorization("user"), reviewController.createReview); // Create a new review
 
-// router
-//   .route("/:id")
-//   .get(serviceController.getServiceById) // Get a service by Id
-//   .patch(
-//     verifyToken,
-//     authorization("admin"),
-//     serviceController.updateServiceById
-//   ) // Update a service by Id
+router
+  .route("/:id")
+  // .get(reviewController.getById); // Get a service by Id
+  .patch(verifyToken, authorization("user"), reviewController.updateReviewById); // Update a service by Id
 //   .delete(
 //     verifyToken,
 //     authorization("admin"),
