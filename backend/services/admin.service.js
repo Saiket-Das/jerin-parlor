@@ -1,6 +1,6 @@
 const User = require("../models/user.model");
 
-// ---------> MAKE ADMIN
+// ---------> Assign an admin
 exports.assignAdminService = async (id) => {
   const result = await User.updateOne(
     { _id: id },
@@ -10,7 +10,7 @@ exports.assignAdminService = async (id) => {
   return result;
 };
 
-// ---------> MAKE STAFF
+// ---------> Assign an staff
 exports.assignStaffService = async (id) => {
   const result = await User.updateOne(
     { _id: id },

@@ -11,7 +11,6 @@ exports.registerService = async (userInfo) => {
 // -------> Find user by email
 exports.findUserByEmail = async (email) => {
   const result = await User.findOne({ email });
-  console.log(result);
 
   return result;
 };

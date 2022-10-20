@@ -3,7 +3,7 @@ const {
   assignStaffService,
 } = require("../services/admin.service");
 
-// ---------> MAKE ADMIN
+// ---------> Assign an admin
 exports.assignAdmin = async (req, res) => {
   try {
     const reuslt = await assignAdminService(req.params.id);
@@ -24,7 +24,7 @@ exports.assignAdmin = async (req, res) => {
   }
 };
 
-// ---------> MAKE STAFF
+// ---------> Assign an staff
 exports.assignStaff = async (req, res) => {
   try {
     const reuslt = await assignStaffService(req.params.id);

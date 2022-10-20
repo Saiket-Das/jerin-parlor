@@ -2,7 +2,8 @@ const {
   registerService,
   findUserByEmail,
   userProfileUpdateService,
-} = require("../services/user.service");
+  findUserById,
+} = require("../services/auth.service");
 const { generateToken } = require("../utilis/token");
 
 // -------> Register

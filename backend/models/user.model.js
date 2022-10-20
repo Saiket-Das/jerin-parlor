@@ -6,17 +6,19 @@ const userSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      require: [true, "Please provide a name"],
+      require: [true, "Please provide your name"],
       trim: true,
+      lowercase: true,
       minLength: [3, "Name must be at least 3 characters"],
       maxLength: [100, "Name is too large"],
     },
 
     email: {
       type: String,
-      require: true,
+      require: [true, "Please provide your email"],
       trim: true,
       unique: true,
+      lowercase: true,
     },
 
     password: {
@@ -34,6 +36,7 @@ const userSchema = mongoose.Schema(
         message: "Your password too week",
       },
     },
+
     confirmPassword: {
       type: String,
       required: [true, "Please confirm your password"],
@@ -50,11 +53,13 @@ const userSchema = mongoose.Schema(
       default:
         "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/344/external-user-user-tanah-basah-glyph-tanah-basah-7.png",
     },
+
     role: {
       type: String,
       enum: ["user", "staff", "admin"],
       default: "user",
     },
+
     contactNumber: {
       type: String,
       validate: [
