@@ -4,8 +4,10 @@ const reviewController = require("../controllers/review.controller");
 const verifyToken = require("../middlewares/verifyToken");
 const authorization = require("../middlewares/authorization");
 
-router.route("/").get(reviewController.getAllReview); // Get all services
-//   .post(verifyToken, authorization("admin"), serviceController.createService); // Create a new service
+router
+  .route("/")
+  .get(reviewController.getAllReview) // Get all services
+  .post(verifyToken, authorization("user"), reviewController.createReview); // Create a new service
 
 // router
 //   .route("/:id")

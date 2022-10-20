@@ -3,17 +3,15 @@ const { ObjectId } = mongoose.Schema.Types;
 
 const reviewSchema = mongoose.Schema(
   {
-    Reviewer: [
-      {
-        name: String,
-        email: String,
-        id: {
-          type: ObjectId,
-          ref: "User",
-          required: true,
-        },
+    reviewer: {
+      name: String,
+      email: String,
+      id: {
+        type: ObjectId,
+        ref: "User",
+        required: true,
       },
-    ],
+    },
 
     description: {
       type: String,
