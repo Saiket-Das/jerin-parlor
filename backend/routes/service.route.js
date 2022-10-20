@@ -4,8 +4,10 @@ const serviceController = require("../controllers/service.controller");
 const verifyToken = require("../middlewares/verifyToken");
 const authorization = require("../middlewares/authorization");
 
-router.route("/").get(serviceController.getAllService);
-//   .post(verifyToken, authorization("admin"), serviceController.newService);
+router
+  .route("/")
+  .get(serviceController.getAllService)
+  .post(verifyToken, authorization("admin"), serviceController.createService);
 
 // router
 //   .route("/assign-staff/:id")

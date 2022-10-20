@@ -15,14 +15,15 @@ const serviceSchema = mongoose.Schema(
     description: {
       type: String,
       trim: true,
+      maxLength: [300, "Service description is too large"],
     },
 
     price: {
-      type: number,
-      required: [true, "Please provide service price"],
+      type: Number,
+      required: [true, "Please provide service's price"],
     },
 
-    imageURLs: [
+    imageURL: [
       {
         type: String,
         required: true,
