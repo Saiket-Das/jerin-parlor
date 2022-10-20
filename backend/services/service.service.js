@@ -31,3 +31,9 @@ exports.updateServiceByIdService = async (serviceId, updateInfo) => {
   );
   return result;
 };
+
+// -------> Update a service by Id
+exports.deleteServiceByIdService = async (serviceId) => {
+  const result = await Service.findByIdAndDelete(serviceId);
+  return result;
+};

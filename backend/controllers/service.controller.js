@@ -3,6 +3,7 @@ const {
   createServiceService,
   getServiceByIdService,
   updateServiceByIdService,
+  deleteServiceByIdService,
 } = require("../services/service.service");
 
 // -------> Get all services
@@ -62,7 +63,7 @@ exports.getServiceById = async (req, res, next) => {
   }
 };
 
-// -------> Find service by Id
+// -------> Update a service by Id
 exports.updateServiceById = async (req, res, next) => {
   try {
     const service = await updateServiceByIdService(req.params.id, req.body);
@@ -70,6 +71,25 @@ exports.updateServiceById = async (req, res, next) => {
     res.status(200).json({
       success: true,
       message: "Successfully update a service info by Id",
+      data: service,
+    });
+  } catch (error) {
+    res.status(400).send({
+      success: false,
+      message: "Something went wrong",
+      error: error.message,
+    });
+  }
+};
+
+// -------> Update a service by Id
+exports.deleteServiceById = async (req, res, next) => {
+  try {
+    const service = await deleteServiceByIdService(req.params.id);
+
+    res.status(200).json({
+      success: true,
+      message: "Successfully delete a service info by Id",
       data: service,
     });
   } catch (error) {

@@ -16,6 +16,11 @@ router
     verifyToken,
     authorization("admin"),
     serviceController.updateServiceById
+  )
+  .delete(
+    verifyToken,
+    authorization("admin"),
+    serviceController.deleteServiceById
   );
 
 module.exports = router;
