@@ -6,21 +6,21 @@ const authorization = require("../middlewares/authorization");
 
 router
   .route("/")
-  .get(serviceController.getAllService)
-  .post(verifyToken, authorization("admin"), serviceController.createService);
+  .get(serviceController.getAllService) // Get all services
+  .post(verifyToken, authorization("admin"), serviceController.createService); // Create a new service
 
 router
   .route("/:id")
-  .get(serviceController.getServiceById)
+  .get(serviceController.getServiceById) // Get a service by Id
   .patch(
     verifyToken,
     authorization("admin"),
     serviceController.updateServiceById
-  )
+  ) // Update a service by Id
   .delete(
     verifyToken,
     authorization("admin"),
     serviceController.deleteServiceById
-  );
+  ); // Delete a service by Id
 
 module.exports = router;
