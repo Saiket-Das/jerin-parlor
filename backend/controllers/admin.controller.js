@@ -32,7 +32,7 @@ exports.assignStaff = async (req, res) => {
     if (reuslt.modifiedCount > 0) {
       res.status(200).json({
         status: "Success",
-        message: "Successfully assign an hiring manager",
+        message: "Successfully assign a staff",
         data: reuslt,
       });
     }
