@@ -3,6 +3,7 @@ const {
   createReviewService,
   updateReviewByIdService,
   deleteReviewByIdService,
+  getReviewById,
 } = require("../services/review.service");
 
 // -------> Get all reviews
@@ -46,16 +47,22 @@ exports.createReview = async (req, res, next) => {
 // -------> Update a review by poster
 exports.updateReviewById = async (req, res, next) => {
   try {
-    const review = await updateReviewByIdService(
-      req.params.id,
-      req.body,
-      req.user.email
-    );
+    const review = await getReviewById(req.params.id);
+
+    if (review?.reviewer?.email != req.user.email) {
+      return res.status(403).json({
+        status: "Forbidden",
+        message: "Fail",
+        error: "You are not authorized.",
+      });
+    }
+
+    const result = await updateReviewByIdService(req.params.id, req.body);
 
     res.status(200).json({
       success: true,
       message: "Successfully update a review by Id",
-      data: review,
+      data: result,
     });
   } catch (error) {
     res.status(400).send({
@@ -69,12 +76,21 @@ exports.updateReviewById = async (req, res, next) => {
 // -------> Delete a review by poster
 exports.deleteReviewById = async (req, res, next) => {
   try {
-    const review = await deleteReviewByIdService(req.params.id, req.user.email);
+    const review = await getReviewById(req.params.id);
+
+    if (review?.reviewer?.email != req.user.email) {
+      return res.status(403).json({
+        status: "Forbidden",
+        message: "Fail",
+        error: "You are not authorized.",
+      });
+    }
+    const result = await deleteReviewByIdService(req.params.id);
 
     res.status(200).json({
       success: true,
       message: "Successfully delete a review by Id",
-      data: review,
+      data: result,
     });
   } catch (error) {
     res.status(400).send({

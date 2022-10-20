@@ -15,21 +15,13 @@ exports.createReviewService = async (reviewInfo) => {
 };
 
 // -------> Update a review by poster
-exports.updateReviewByIdService = async (
-  reviewId,
-  reviewInfo,
-  reviewerEmail
-) => {
-  const review = await Review.findById(reviewId);
+exports.getReviewById = async (reviewId) => {
+  const result = await Review.findById(reviewId);
+  return result;
+};
 
-  if (review?.reviewer?.email != reviewerEmail) {
-    return res.status(403).json({
-      status: "Forbidden",
-      message: "Fail",
-      error: "You are not authorized.",
-    });
-  }
-
+// -------> Update a review by poster
+exports.updateReviewByIdService = async (reviewId, reviewInfo) => {
   const result = await Review.findByIdAndUpdate({ _id: reviewId }, reviewInfo, {
     runValidators: true,
   });
@@ -38,17 +30,7 @@ exports.updateReviewByIdService = async (
 };
 
 // -------> Delete a review by poster
-exports.deleteReviewByIdService = async (reviewId, reviewerEmail) => {
-  const review = await Review.findById(reviewId);
-
-  if (review?.reviewer?.email != reviewerEmail) {
-    return res.status(403).json({
-      status: "Forbidden",
-      message: "Fail",
-      error: "You are not authorized.",
-    });
-  }
-
+exports.deleteReviewByIdService = async (reviewId) => {
   const result = await Review.findByIdAndDelete(reviewId);
 
   return result;
