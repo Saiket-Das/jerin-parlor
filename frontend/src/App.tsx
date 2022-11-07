@@ -1,5 +1,12 @@
-function App() {
-  return <h1 className="text-xl font-bold underline">Hello world!</h1>;
-}
+import React from "react";
+import Card from "./app/components/common/Card";
+
+const App = () => {
+  return (
+    <div>
+      <Card />
+    </div>
+  );
+};
 
 export default App;
