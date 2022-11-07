@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "./CustomLink";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -73,9 +73,10 @@ const Header = () => {
               {menuItems}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl font-bold">
-            Jerin's Parlour
-          </Link>
+
+          <h2 className="btn btn-ghost normal-case text-xl font-bold">
+            <Link to="/">Jerin's Parlour</Link>
+          </h2>
         </div>
 
         <div className="navbar-center hidden lg:flex">
