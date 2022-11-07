@@ -1,11 +1,13 @@
-import React from "react";
-import Card from "./app/components/common/Card";
-import Header from "./app/components/common/Header";
+import Card from "./app/components/shared/Card";
+import Footer from "./app/components/shared/Footer";
+import Header from "./app/components/shared/Header";
 
 const App = () => {
   return (
     <div>
       <Header />
+
+      <Footer />
     </div>
   );
 };
