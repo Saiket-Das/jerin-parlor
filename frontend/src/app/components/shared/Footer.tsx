@@ -24,6 +24,7 @@ const Footer = () => {
             Providing reliable tech since 1992
           </p>
         </div>
+
         <div>
           <span className="footer-title">Services</span>
           <Link to="/" className="link link-hover">
@@ -39,6 +40,7 @@ const Footer = () => {
             Advertisement
           </Link>
         </div>
+
         <div>
           <span className="footer-title">Company</span>
           <Link to="/" className="link link-hover">
