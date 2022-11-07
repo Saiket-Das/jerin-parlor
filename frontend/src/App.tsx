@@ -1,8 +1,6 @@
-import Card from "./app/components/shared/Card";
-import Footer from "./app/components/shared/Footer";
+import Home from "./app/pages/home/Home";
+
 import Header from "./app/components/shared/Header";
-import Loading from "./app/components/shared/Loading";
-import Button from "./app/components/shared/AppButton";
 
 const App = () => {
   return (
@@ -10,7 +8,7 @@ const App = () => {
       <Header />
       {/* <Loading /> */}
 
-      <Button>Explore more</Button>
+      <Home />
 
       {/* <Footer /> */}
     </div>
