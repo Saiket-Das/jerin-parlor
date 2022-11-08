@@ -1,6 +1,7 @@
 import Hero from "../../components/home/Hero";
 import Input from "../../components/shared/AppInput";
 import Card from "../../components/shared/Card";
+import Testimonial from "../../components/shared/Testimonial";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         placeholder="Enter your name"
         width="400px"
       />
+      <Testimonial />
     </div>
   );
 };
