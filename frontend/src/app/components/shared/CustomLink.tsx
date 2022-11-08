@@ -13,7 +13,7 @@ function CustomLink({ children, to, ...props }: Props) {
     <div>
       <Link
         style={{
-          color: match ? "#F63E7B" : "black",
+          color: match ? "#F63E7B" : "#6B7280",
           //   fontWeight: match ? 500 : 400,
         }}
         to={to}

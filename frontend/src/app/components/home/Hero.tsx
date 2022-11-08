@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import AppButton from "../shared/AppButton";
 
-import heroImg from "../../assets/images/Hero/7852121.jpg";
+import heroImg from "../../assets/images/Hero/hero.jpg";
 
 const Hero = () => {
   return (
     <div>
-      <section className="bg-white mx-28 my-10">
+      <section className="bg-white my-10">
         <div className="flex justify-around">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">
@@ -26,7 +25,7 @@ const Hero = () => {
             <img
               src={heroImg}
               alt="mockup"
-              className="rounded-md lg:h-[478px]"
+              className="rounded-md lg:h-[478px] lg:w-[484px]"
             />
           </div>
         </div>

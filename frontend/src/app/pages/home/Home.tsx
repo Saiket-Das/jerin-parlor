@@ -4,7 +4,7 @@ import Card from "../../components/shared/Card";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mx-6 md:mx-20 lg:mx-36">
       <Hero />
       <Card />
 

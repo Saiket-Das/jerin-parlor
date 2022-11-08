@@ -1,4 +1,5 @@
 import Link from "./CustomLink";
+import logo from "../../assets/images/Hero/logo.png";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -46,7 +47,7 @@ const Header = () => {
   );
 
   return (
-    <div>
+    <div className="mx-28">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -74,13 +75,16 @@ const Header = () => {
             </ul>
           </div>
 
-          <h2 className="btn btn-ghost normal-case text-xl font-bold">
-            <Link to="/">Jerin's Parlour</Link>
-          </h2>
+          <a href="https://flowbite.com/" className="flex items-center">
+            <img src={logo} className="mr-2 h-10 sm:h-9" alt="Flowbite Logo" />
+            <span className="self-center text-xl font-semibold whitespace-nowrap">
+              Jerin's Parlor
+            </span>
+          </a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+          <ul className="menu menu-horizontal">{menuItems}</ul>
         </div>
 
         <div className="navbar-end">
