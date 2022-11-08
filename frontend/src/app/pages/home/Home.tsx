@@ -1,9 +1,11 @@
+import Hero from "../../components/home/Hero";
 import Input from "../../components/shared/AppInput";
 import Card from "../../components/shared/Card";
 
 const Home = () => {
   return (
     <div>
+      <Hero />
       <Card />
 
       <Input
