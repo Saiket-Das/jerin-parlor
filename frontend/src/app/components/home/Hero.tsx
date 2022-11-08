@@ -20,7 +20,7 @@ const Hero = () => {
               world use Flowbite to simplify their payment stack.
             </p>
 
-            <AppButton>Get an appointment</AppButton>
+            <AppButton navigate="/home">Get an appointment</AppButton>
           </div>
           <div className=" lg:mt-0 lg:col-span-5 lg:flex">
             <img
