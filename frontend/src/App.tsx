@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./app/pages/dashboard/Dashboard";
 import Book from "./app/pages/dashboard/customer/Book";
 import routes from "./app/confiq/routes";
+import NotFound from "./app/components/shared/NotFound";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
 
         {/* <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route> */}
+
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   );
