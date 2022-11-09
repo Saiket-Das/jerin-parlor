@@ -15,8 +15,8 @@ const Hero = () => {
               FOR EVERY WOMEN
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-md">
-              From checkout to global sales tax compliance, companies around the
-              world use Flowbite to simplify their payment stack.
+              Our committed and competent team is here to help keep your hair,
+              nails, skin, and body healthy and beautiful. ·
             </p>
 
             <AppButton navigate="/home">Get an appointment</AppButton>

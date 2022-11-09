@@ -12,7 +12,7 @@ const AppInput = ({
   type,
   name,
   placeholder,
-  width = "350px",
+  width = "380px",
   borderColor = "white",
   readOnly = false,
 }: Props) => {

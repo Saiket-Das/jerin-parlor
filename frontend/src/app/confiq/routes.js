@@ -6,6 +6,6 @@ export default Object.freeze({
   SIGNUP: "/register",
   DASHBOARD: "/dashboard",
   BOOK: "/dashboard",
-  BOOKING_LIST: "/booking/list",
+  BOOKING_LIST: "booking/list",
   REVIEW: "/review",
 });

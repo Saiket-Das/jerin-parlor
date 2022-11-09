@@ -6,6 +6,7 @@ import Dashboard from "./app/pages/dashboard/Dashboard";
 import Book from "./app/pages/dashboard/customer/Book";
 import routes from "./app/confiq/routes";
 import NotFound from "./app/components/shared/NotFound";
+import BookingList from "./app/pages/dashboard/customer/BookingList";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path={routes.DASHBOARD} element={<Dashboard />}>
           {/* Nested routes into DASHBOARD */}
           <Route index element={<Book />}></Route>
+          <Route path={routes.BOOKING_LIST} element={<BookingList />}></Route>
         </Route>
 
         {/* <Route path='login' element={<Login></Login>}></Route>
