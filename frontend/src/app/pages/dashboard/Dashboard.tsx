@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import {
   faCartShopping,
-  faMessage,
   faHardDrive,
+  faMessage,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Icon from "../../components/shared/Icon";
@@ -18,10 +18,7 @@ const Dashboard = () => {
           type="checkbox"
           className="drawer-toggle"
         />
-        <div className="drawer-content">
-          <h2 className="text-3xl text-purple-500 font-bold text-center">
-            My Dashboard
-          </h2>
+        <div className="drawer-content bg-base-300 ">
           <Outlet></Outlet>
         </div>
         <div className="drawer-side">

@@ -15,17 +15,17 @@ const Header = () => {
       <li>
         <Link to={routes.HOME}>Home</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to={routes.HOME}>About</Link>
-      </li>
+      </li> */}
       <li>
         <Link to={routes.APPOINTMENT}>Appoinment</Link>
       </li>
       <li>
-        <Link to={routes.DASHBOARD}>Dashboard</Link>
+        <Link to={routes.CONTACT_US}>Contact us</Link>
       </li>
       <li>
-        <Link to={routes.CONTACT_US}>Contact us</Link>
+        <Link to={routes.DASHBOARD}>Dashboard</Link>
       </li>
       {/* 
         {
