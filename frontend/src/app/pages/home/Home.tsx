@@ -13,7 +13,7 @@ const Home = () => {
         type="text"
         name="Fname"
         placeholder="Enter your name"
-        width="400px"
+        // width="400px"
       />
       <Testimonial />
     </div>

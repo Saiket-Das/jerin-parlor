@@ -5,10 +5,10 @@ type Props = {
   width?: string;
 };
 
-const AppInput = ({ type, name, placeholder, width = "370px" }: Props) => {
+const AppInput = ({ type, name, placeholder, width = "350px" }: Props) => {
   return (
     <div>
-      <div className=" px-3 sm:w-1/2" style={{ width: width }}>
+      <div className=" sm:w-1/2" style={{ width: width }}>
         <div className="mb-5">
           <input
             type={type}

@@ -1,5 +1,8 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import Icon from "../../components/shared/Icon";
+
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
   return (
@@ -21,13 +24,19 @@ const Dashboard = () => {
           <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <Link to="/dashboard">Book</Link>
+              <Link to="/dashboard">
+                <Icon icon={faCartShopping} />
+                Book
+              </Link>
             </li>
             <li>
               <Link to="/dashboard/review">Booking List</Link>
             </li>
             <li>
-              <Link to="/dashboard/history">Review</Link>
+              <Link to="/dashboard/history">
+                {/* <Icon /> */}
+                Review
+              </Link>
             </li>
             {/* {
                         admin && <>
