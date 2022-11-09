@@ -4,6 +4,8 @@ type Props = {
   placeholder: string;
   width?: string;
   borderColor?: string;
+  style?: any;
+  readOnly?: boolean;
 };
 
 const AppInput = ({
@@ -12,6 +14,7 @@ const AppInput = ({
   placeholder,
   width = "350px",
   borderColor = "white",
+  readOnly = false,
 }: Props) => {
   return (
     <div>
@@ -21,6 +24,7 @@ const AppInput = ({
             type={type}
             name={name}
             // id="fName"
+            readOnly={readOnly}
             placeholder={placeholder}
             className={`
             w-full rounded-md border-${borderColor} bg-white py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}

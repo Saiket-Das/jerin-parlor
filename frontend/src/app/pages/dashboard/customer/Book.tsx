@@ -5,22 +5,31 @@ const Book = () => {
     <div className="px-10 pt-12">
       <Input
         type="text"
-        name="Fname"
-        placeholder="Enter your name"
+        name="name"
+        placeholder="Ahan Bryan"
         // width="400px"
+        readOnly={true}
       />
 
       <Input
         type="text"
-        name="Fname"
-        placeholder="Enter your name"
+        name="email"
+        placeholder="ahanbryan@gmail.com"
         // width="400px"
+        readOnly={true}
       />
 
       <Input
         type="text"
-        name="Fname"
-        placeholder="Enter your name"
+        name="Tname"
+        placeholder="Treatmet name"
+        // width="400px"
+      />
+
+      <Input
+        type="number"
+        name="price"
+        placeholder="Treatment price"
         // width="400px"
       />
     </div>
