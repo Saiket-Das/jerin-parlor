@@ -5,6 +5,7 @@ export default Object.freeze({
   SIGNIN: "/login",
   SIGNUP: "/register",
   DASHBOARD: "/dashboard",
-  BOOK: "/book",
+  BOOK: "/dashboard",
   BOOKING_LIST: "/booking/list",
+  REVIEW: "/review",
 });

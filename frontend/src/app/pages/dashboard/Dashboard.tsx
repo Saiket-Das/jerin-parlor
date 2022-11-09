@@ -7,6 +7,7 @@ import {
 
 import Icon from "../../components/shared/Icon";
 import Link from "../../components/shared/CustomLink";
+import routes from "../../confiq/routes";
 
 const Dashboard = () => {
   return (
@@ -28,19 +29,19 @@ const Dashboard = () => {
           <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <Link to="/dashboard">
+              <Link to={routes.BOOK}>
                 <Icon icon={faCartShopping}></Icon>
                 Book
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/review">
+              <Link to={routes.BOOKING_LIST}>
                 <Icon icon={faHardDrive}></Icon>
                 Booking List
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/history">
+              <Link to={routes.REVIEW}>
                 <Icon icon={faMessage}></Icon>
                 Review
               </Link>
