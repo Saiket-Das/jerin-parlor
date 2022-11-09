@@ -1,5 +1,6 @@
 import Link from "./CustomLink";
 import logo from "../../assets/images/Hero/logo.png";
+import routes from "../../confiq/routes";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -12,19 +13,19 @@ const Header = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/home">Home</Link>
+        <Link to={routes.HOME}>Home</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to={routes.HOME}>About</Link>
       </li>
       <li>
-        <Link to="/appointment">Appoinment</Link>
+        <Link to={routes.APPOINTMENT}>Appoinment</Link>
       </li>
       <li>
-        <Link to="/review">Review</Link>
+        <Link to={routes.DASHBOARD}>Dashboard</Link>
       </li>
       <li>
-        <Link to="/contact">Contact us</Link>
+        <Link to={routes.CONTACT_US}>Contact us</Link>
       </li>
       {/* 
         {

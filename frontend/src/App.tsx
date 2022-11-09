@@ -4,6 +4,7 @@ import Header from "./app/components/shared/Header";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./app/pages/dashboard/Dashboard";
 import Book from "./app/pages/dashboard/customer/Book";
+import routes from "./app/confiq/routes";
 
 const App = () => {
   return (
@@ -11,11 +12,11 @@ const App = () => {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="home" element={<Home></Home>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path={routes.HOME} element={<Home />}></Route>
 
-        <Route path="dashboard" element={<Dashboard />}>
-          {/* NESTED ROUTE into Dashboard */}
+        <Route path={routes.DASHBOARD} element={<Dashboard />}>
+          {/* Nested routes into DASHBOARD */}
           <Route index element={<Book />}></Route>
         </Route>
 
