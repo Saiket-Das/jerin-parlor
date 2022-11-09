@@ -1,8 +1,8 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
-import Icon from "../../components/shared/Icon";
-
+import { Outlet } from "react-router-dom";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
+import Icon from "../../components/shared/Icon";
+import Link from "../../components/shared/CustomLink";
 
 const Dashboard = () => {
   return (
@@ -25,7 +25,7 @@ const Dashboard = () => {
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link to="/dashboard">
-                <Icon icon={faCartShopping} />
+                <Icon icon={faCartShopping}></Icon>
                 Book
               </Link>
             </li>
@@ -40,9 +40,9 @@ const Dashboard = () => {
             </li>
             {/* {
                         admin && <>
-                            <li><Link to='/dashboard/users'> All Users</Link></li>
-                            <li><Link to='/dashboard/doctors'> Add a doctors</Link></li>
-                            <li><Link to='/dashboard/manageDoctors'> Manage Doctors</Link></li>
+                            <li><CustomLink to='/dashboard/users'> All Users</CustomLink></li>
+                            <li><CustomLink to='/dashboard/doctors'> Add a doctors</CustomLink></li>
+                            <li><CustomLink to='/dashboard/manageDoctors'> Manage Doctors</CustomLink></li>
                         </>
                     } */}
           </ul>

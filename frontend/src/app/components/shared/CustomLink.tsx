@@ -1,7 +1,7 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 type Props = {
-  children: string;
+  children: any;
   to: string;
 };
 
