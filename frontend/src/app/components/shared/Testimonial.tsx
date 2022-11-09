@@ -28,12 +28,7 @@ const Testimonial = () => {
             </div>
             <div className="rating mb-3">
               <input type="radio" name="rating-1" className="mask mask-star" />
-              <input
-                type="radio"
-                name="rating-1"
-                className="mask mask-star"
-                read-only
-              />
+              <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
