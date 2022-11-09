@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Icon = ({ icon }: Props) => {
-  return <FontAwesomeIcon icon={icon} />;
+  return <FontAwesomeIcon className="pr-2" icon={icon} />;
 };
 
 export default Icon;

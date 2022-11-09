@@ -1,5 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faMessage,
+  faHardDrive,
+} from "@fortawesome/free-solid-svg-icons";
 
 import Icon from "../../components/shared/Icon";
 import Link from "../../components/shared/CustomLink";
@@ -30,11 +34,14 @@ const Dashboard = () => {
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/review">Booking List</Link>
+              <Link to="/dashboard/review">
+                <Icon icon={faHardDrive}></Icon>
+                Booking List
+              </Link>
             </li>
             <li>
               <Link to="/dashboard/history">
-                {/* <Icon /> */}
+                <Icon icon={faMessage}></Icon>
                 Review
               </Link>
             </li>
