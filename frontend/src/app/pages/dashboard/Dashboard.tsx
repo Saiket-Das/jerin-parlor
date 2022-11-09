@@ -11,19 +11,19 @@ import routes from "../../confiq/routes";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="h-[50vh]">
       <div className="drawer drawer-mobile">
         <input
           id="dashboard-sidebar"
           type="checkbox"
           className="drawer-toggle"
         />
-        <div className="drawer-content bg-base-300 ">
+        <div className="drawer-content bg-base-300 rounded-sm">
           <Outlet></Outlet>
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-56 bg-base-100 text-base-content">
+          <ul className="menu p-3 lg:px-10 overflow-y-auto w-56 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link to={routes.BOOK}>

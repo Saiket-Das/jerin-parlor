@@ -3,9 +3,16 @@ type Props = {
   name: string;
   placeholder: string;
   width?: string;
+  borderColor?: string;
 };
 
-const AppInput = ({ type, name, placeholder, width = "350px" }: Props) => {
+const AppInput = ({
+  type,
+  name,
+  placeholder,
+  width = "350px",
+  borderColor = "white",
+}: Props) => {
   return (
     <div>
       <div className=" sm:w-1/2" style={{ width: width }}>
@@ -15,7 +22,8 @@ const AppInput = ({ type, name, placeholder, width = "350px" }: Props) => {
             name={name}
             // id="fName"
             placeholder={placeholder}
-            className="w-full rounded-md border-2 border-[#e0e0e0] bg-white py-3 px-6 text-base outline-none focus:border-primary focus:shadow-md"
+            className={`
+            w-full rounded-md border-${borderColor} bg-white py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
           />
         </div>
       </div>
