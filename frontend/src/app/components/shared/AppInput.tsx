@@ -17,19 +17,19 @@ const AppInput = ({
 }: Props) => {
   return (
     <div>
-      <div className=" sm:w-1/2" style={{ width: width }}>
-        <div className="mb-5">
-          <input
-            type={type}
-            name={name}
-            readOnly={readOnly}
-            placeholder={placeholder}
-            className={`
+      {/* <div className=" sm:w-1/2" > */}
+      <div className="mb-5" style={{ width: width }}>
+        <input
+          type={type}
+          name={name}
+          readOnly={readOnly}
+          placeholder={placeholder}
+          className={`
             w-full rounded-md border-${borderColor} bg-white py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
-          />
-        </div>
+        />
       </div>
     </div>
+    // </div>
   );
 };
 

@@ -14,7 +14,7 @@ const AppTextarea = ({
   borderColor = "white",
 }: Props) => {
   return (
-    <div className="" style={{ width: width }}>
+    <div className="mb-5" style={{ width: width }}>
       <textarea
         // id="message"
         id={name}
