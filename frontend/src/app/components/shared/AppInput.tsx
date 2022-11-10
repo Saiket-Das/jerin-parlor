@@ -4,7 +4,6 @@ type Props = {
   placeholder: string;
   width?: string;
   borderColor?: string;
-  style?: any;
   readOnly?: boolean;
 };
 
@@ -23,7 +22,6 @@ const AppInput = ({
           <input
             type={type}
             name={name}
-            // id="fName"
             readOnly={readOnly}
             placeholder={placeholder}
             className={`

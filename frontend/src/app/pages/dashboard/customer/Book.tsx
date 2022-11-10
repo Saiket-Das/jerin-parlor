@@ -1,4 +1,5 @@
 import Input from "../../../components/shared/AppInput";
+import AppTextarea from "../../../components/shared/AppTextarea";
 
 const Book = () => {
   return (
@@ -15,6 +16,8 @@ const Book = () => {
       <Input type="text" name="Tname" placeholder="Treatmet name" />
 
       <Input type="number" name="price" placeholder="Treatment price" />
+
+      <AppTextarea name="comment" placeholder="Your comment" />
     </div>
   );
 };
