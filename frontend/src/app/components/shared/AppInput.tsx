@@ -17,7 +17,6 @@ const AppInput = ({
 }: Props) => {
   return (
     <div>
-      {/* <div className=" sm:w-1/2" > */}
       <div className="mb-5" style={{ width: width }}>
         <input
           type={type}
@@ -29,7 +28,6 @@ const AppInput = ({
         />
       </div>
     </div>
-    // </div>
   );
 };
 

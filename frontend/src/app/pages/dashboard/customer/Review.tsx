@@ -1,6 +1,6 @@
 import Button from "../../../components/shared/AppButton";
 import Input from "../../../components/shared/AppInput";
-import AppTextarea from "../../../components/shared/AppTextarea";
+import Textarea from "../../../components/shared/AppTextarea";
 
 const Review = () => {
   return (
@@ -13,7 +13,7 @@ const Review = () => {
         readOnly={true}
       />
 
-      <AppTextarea name="comment" placeholder="Your comment" />
+      <Textarea name="comment" placeholder="Your comment" />
 
       <div className="mb-5">
         <div className="rating">
