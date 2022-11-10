@@ -1,4 +1,5 @@
 type Props = {
+  label?: string;
   type: string;
   name: string;
   placeholder: string;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const AppInput = ({
+  label,
   type,
   name,
   placeholder,
@@ -18,13 +20,15 @@ const AppInput = ({
   return (
     <div>
       <div className="mb-5" style={{ width: width }}>
+        <label className="font-medium">{label}</label>
+
         <input
           type={type}
           name={name}
           readOnly={readOnly}
           placeholder={placeholder}
           className={`
-            w-full rounded-md border-${borderColor} bg-white py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
+            w-full rounded-md border-${borderColor} bg-white mt-2 py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
         />
       </div>
     </div>

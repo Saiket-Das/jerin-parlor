@@ -14,6 +14,7 @@ const Home = () => {
         name="Fname"
         placeholder="Enter your name"
         // width="400px"
+        label="Service title"
       />
       <Testimonial />
     </div>
