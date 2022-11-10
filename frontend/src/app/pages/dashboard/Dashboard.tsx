@@ -3,6 +3,9 @@ import {
   faCartShopping,
   faHardDrive,
   faMessage,
+  faPlus,
+  faUserPlus,
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Icon from "../../components/shared/Icon";
@@ -10,8 +13,10 @@ import Link from "../../components/shared/CustomLink";
 import routes from "../../confiq/routes";
 
 const Dashboard = () => {
+  const user = false;
+  const admin = true;
   return (
-    <div className="h-[50vh]">
+    <div>
       <div className="drawer drawer-mobile">
         <input
           id="dashboard-sidebar"
@@ -23,33 +28,62 @@ const Dashboard = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-3 lg:px-10 overflow-y-auto w-56 bg-base-100 text-base-content">
+          <ul className="menu p-3 lg:mx-5 lg:px-6 overflow-y-auto w-56 bg-base-100 text-base-content">
             {/* <!-- Sidebar content here --> */}
-            <li>
-              <Link to={routes.BOOK}>
-                <Icon icon={faCartShopping}></Icon>
-                Book
-              </Link>
-            </li>
-            <li>
-              <Link to={routes.BOOKING_LIST}>
-                <Icon icon={faHardDrive}></Icon>
-                Booking List
-              </Link>
-            </li>
-            <li>
-              <Link to={routes.REVIEW}>
-                <Icon icon={faMessage}></Icon>
-                Review
-              </Link>
-            </li>
-            {/* {
-                        admin && <>
-                            <li><CustomLink to='/dashboard/users'> All Users</CustomLink></li>
-                            <li><CustomLink to='/dashboard/doctors'> Add a doctors</CustomLink></li>
-                            <li><CustomLink to='/dashboard/manageDoctors'> Manage Doctors</CustomLink></li>
-                        </>
-                    } */}
+
+            {user && (
+              <>
+                <li>
+                  <Link to={routes.BOOK}>
+                    <Icon icon={faCartShopping}></Icon>
+                    Book
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.BOOKING_LIST}>
+                    <Icon icon={faHardDrive}></Icon>
+                    Booking List
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.REVIEW}>
+                    <Icon icon={faMessage}></Icon>
+                    Review
+                  </Link>
+                </li>
+              </>
+            )}
+
+            {admin && (
+              <>
+                <li>
+                  <Link to={routes.BOOKING_LIST}>
+                    <Icon icon={faHardDrive}></Icon>
+                    Order List
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to={routes.BOOK}>
+                    <Icon icon={faPlus}></Icon>
+                    Add Service
+                  </Link>
+                </li>
+                <li>
+                  <Link to={routes.REVIEW}>
+                    <Icon icon={faUserPlus}></Icon>
+                    Make Staff
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to={routes.REVIEW}>
+                    <Icon icon={faEdit}></Icon>
+                    Manage Services
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
