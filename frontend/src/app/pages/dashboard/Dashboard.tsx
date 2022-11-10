@@ -57,27 +57,27 @@ const Dashboard = () => {
             {admin && (
               <>
                 <li>
-                  <Link to={routes.BOOKING_LIST}>
+                  <Link to={routes.ORDER_LIST}>
                     <Icon icon={faHardDrive}></Icon>
                     Order List
                   </Link>
                 </li>
 
                 <li>
-                  <Link to={routes.BOOK}>
+                  <Link to={routes.ADD_SERVICE}>
                     <Icon icon={faPlus}></Icon>
                     Add Service
                   </Link>
                 </li>
                 <li>
-                  <Link to={routes.REVIEW}>
+                  <Link to={routes.MAKE_STAFF}>
                     <Icon icon={faUserPlus}></Icon>
                     Make Staff
                   </Link>
                 </li>
 
                 <li>
-                  <Link to={routes.REVIEW}>
+                  <Link to={routes.MANAGE_SERVICES}>
                     <Icon icon={faEdit}></Icon>
                     Manage Services
                   </Link>

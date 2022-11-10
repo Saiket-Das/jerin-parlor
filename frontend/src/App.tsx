@@ -8,6 +8,7 @@ import routes from "./app/confiq/routes";
 import NotFound from "./app/components/shared/NotFound";
 import BookingList from "./app/pages/dashboard/customer/BookingList";
 import Review from "./app/pages/dashboard/customer/Review";
+import OrderList from "./app/pages/dashboard/admin/OrderList";
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
           <Route index element={<Book />}></Route>
           <Route path={routes.BOOKING_LIST} element={<BookingList />}></Route>
           <Route path={routes.REVIEW} element={<Review />}></Route>
+
+          {/* Admin  */}
+          <Route path={routes.ORDER_LIST} element={<OrderList />}></Route>
         </Route>
 
         {/* <Route path='login' element={<Login></Login>}></Route>
