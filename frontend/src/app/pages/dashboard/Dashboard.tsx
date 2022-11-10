@@ -3,6 +3,7 @@ import {
   faCartShopping,
   faHardDrive,
   faMessage,
+  faListCheck,
   faPlus,
   faUserPlus,
   faEdit,
@@ -58,7 +59,7 @@ const Dashboard = () => {
               <>
                 <li>
                   <Link to={routes.ORDER_LIST}>
-                    <Icon icon={faHardDrive}></Icon>
+                    <Icon icon={faListCheck}></Icon>
                     Order List
                   </Link>
                 </li>

@@ -11,6 +11,7 @@ import Review from "./app/pages/dashboard/customer/Review";
 import OrderList from "./app/pages/dashboard/admin/OrderList";
 import AddService from "./app/pages/dashboard/admin/AddService";
 import MakeStaff from "./app/pages/dashboard/admin/MakeStaff";
+import ManageService from "./app/pages/dashboard/admin/ManageService";
 
 const App = () => {
   return (
@@ -31,6 +32,10 @@ const App = () => {
           <Route path={routes.ORDER_LIST} element={<OrderList />}></Route>
           <Route path={routes.ADD_SERVICE} element={<AddService />}></Route>
           <Route path={routes.MAKE_STAFF} element={<MakeStaff />}></Route>
+          <Route
+            path={routes.MANAGE_SERVICES}
+            element={<ManageService />}
+          ></Route>
         </Route>
 
         {/* <Route path='login' element={<Login></Login>}></Route>
