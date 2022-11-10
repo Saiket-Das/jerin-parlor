@@ -14,7 +14,7 @@ import Link from "../../components/shared/CustomLink";
 import routes from "../../confiq/routes";
 
 const Dashboard = () => {
-  const user = false;
+  const user = true;
   const admin = true;
   return (
     <div>

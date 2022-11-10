@@ -1,3 +1,4 @@
+import Button from "../../../components/shared/AppButton";
 import Input from "../../../components/shared/AppInput";
 import AppTextarea from "../../../components/shared/AppTextarea";
 
@@ -14,7 +15,7 @@ const Review = () => {
 
       <AppTextarea name="comment" placeholder="Your comment" />
 
-      <div>
+      <div className="mb-5">
         <div className="rating">
           <input
             type="radio"
@@ -44,6 +45,8 @@ const Review = () => {
           />
         </div>
       </div>
+
+      <Button>Submit</Button>
     </div>
   );
 };

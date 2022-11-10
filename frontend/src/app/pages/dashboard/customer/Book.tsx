@@ -1,3 +1,4 @@
+import Button from "../../../components/shared/AppButton";
 import Input from "../../../components/shared/AppInput";
 
 const Book = () => {
@@ -15,6 +16,8 @@ const Book = () => {
       <Input type="text" name="Tname" placeholder="Treatmet name" />
 
       <Input type="number" name="price" placeholder="Treatment price" />
+
+      <Button>Checkout</Button>
     </div>
   );
 };
