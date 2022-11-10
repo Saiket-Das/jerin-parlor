@@ -8,4 +8,8 @@ export default Object.freeze({
   BOOK: "/dashboard",
   BOOKING_LIST: "booking/list",
   REVIEW: "review",
+  ORDER_LIST: "order/list",
+  ADD_SERVICE: "add/service",
+  MAKE_STAFF: "make/staff",
+  MANAGE_SERVICES: "manage/services",
 });
