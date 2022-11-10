@@ -7,5 +7,5 @@ export default Object.freeze({
   DASHBOARD: "/dashboard",
   BOOK: "/dashboard",
   BOOKING_LIST: "booking/list",
-  REVIEW: "/review",
+  REVIEW: "review",
 });

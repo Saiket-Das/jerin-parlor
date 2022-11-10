@@ -3,7 +3,7 @@ import AppTextarea from "../../../components/shared/AppTextarea";
 
 const Book = () => {
   return (
-    <div className="px-10 pt-12">
+    <div>
       <Input type="text" name="name" placeholder="Ahan Bryan" readOnly={true} />
 
       <Input
