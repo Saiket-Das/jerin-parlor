@@ -10,6 +10,7 @@ import BookingList from "./app/pages/dashboard/customer/BookingList";
 import Review from "./app/pages/dashboard/customer/Review";
 import OrderList from "./app/pages/dashboard/admin/OrderList";
 import AddService from "./app/pages/dashboard/admin/AddService";
+import MakeStaff from "./app/pages/dashboard/admin/MakeStaff";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           {/* Admin  */}
           <Route path={routes.ORDER_LIST} element={<OrderList />}></Route>
           <Route path={routes.ADD_SERVICE} element={<AddService />}></Route>
+          <Route path={routes.MAKE_STAFF} element={<MakeStaff />}></Route>
         </Route>
 
         {/* <Route path='login' element={<Login></Login>}></Route>
