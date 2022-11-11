@@ -5,21 +5,39 @@ const OrderList = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th className="bg-base-300">No</th>
-              <th className="bg-base-300">Name</th>
-              <th className="bg-base-300">Email</th>
-              <th className="bg-base-300">Service</th>
-              <th className="bg-base-300">Pay with</th>
-              <th className="bg-base-300">Status</th>
+              <th className="bg-base-300 capitalize">No</th>
+              <th className="bg-base-300 capitalize">Name</th>
+              <th className="bg-base-300 capitalize">Email</th>
+              <th className="bg-base-300 capitalize">Service</th>
+              <th className="bg-base-300 capitalize">Pay with</th>
+              <th className="bg-base-300 capitalize">Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>1</th>
+              <td>1</td>
               <td>Ahan Bryan</td>
               <td>ahanbryan@gmail.com</td>
               <td>Hair Treatment</td>
               <td>Credit card</td>
+
+              <select className="select  text-base font-normal ">
+                <option selected>Pending</option>
+                <option>Done</option>
+              </select>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>Ahan Bryan</td>
+              <td>ahanbryan@gmail.com</td>
+              <td>Hair Treatment</td>
+              <td>Credit card</td>
+
+              <select className="select  text-base font-normal mt-1">
+                <option selected>Pending</option>
+                <option>Done</option>
+              </select>
             </tr>
           </tbody>
         </table>
