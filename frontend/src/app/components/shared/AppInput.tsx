@@ -27,8 +27,7 @@ const AppInput = ({
           name={name}
           readOnly={readOnly}
           placeholder={placeholder}
-          className={`
-            w-full rounded-md border-${borderColor} bg-white mt-2 py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
+          className={`w-full rounded-md border-${borderColor} bg-white mt-2 py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
         />
       </div>
     </div>
