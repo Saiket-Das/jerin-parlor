@@ -1,6 +1,7 @@
 import Link from "./CustomLink";
 import logo from "../../assets/images/Hero/logo.png";
 import routes from "../../confiq/routes";
+import AppButton from "./AppButton";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -48,8 +49,9 @@ const Header = () => {
   );
 
   return (
-    <div className="lg:mx-[130px] ">
-      <div className="navbar bg-base-100 py-5">
+    <div className="">
+      <div className="navbar border-2 bg-base-100 py-5 ">
+        {/* ------ MOBILE - MENU ICON ------ */}
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,7 +74,11 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
+              {/* ------ MOBILE - MENU ITEMS LIST ------ */}
               {menuItems}
+              <li className="navbar-end flex lg:hidden">
+                <AppButton navigate={routes.SIGNIN}>Login</AppButton>
+              </li>
             </ul>
           </div>
 
@@ -90,11 +96,7 @@ const Header = () => {
             </div>
           </Link>
         </div>
-
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal">{menuItems}</ul>
-        </div>
-
+        {/* ------ MOBILE - DASHBOARD ICON ------ */}
         <div className="navbar-end">
           <label
             htmlFor="dashboard-sidebar"
@@ -116,6 +118,15 @@ const Header = () => {
               />
             </svg>
           </label>
+        </div>
+
+        {/* ------ WEB - MENU ITEMS LIST ------ */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal">{menuItems}</ul>
+        </div>
+
+        <div className="navbar-end hidden lg:flex">
+          <AppButton navigate={routes.SIGNIN}>Login</AppButton>
         </div>
       </div>
     </div>

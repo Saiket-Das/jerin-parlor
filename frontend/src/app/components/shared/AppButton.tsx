@@ -7,7 +7,6 @@ type Props = {
 };
 
 const AppButton = ({ children, navigate, width }: Props) => {
-  console.log(width);
   return (
     <>
       {navigate ? (
