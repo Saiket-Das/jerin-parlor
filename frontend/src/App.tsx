@@ -12,6 +12,7 @@ import OrderList from "./app/pages/dashboard/admin/OrderList";
 import AddService from "./app/pages/dashboard/admin/AddService";
 import MakeStaff from "./app/pages/dashboard/admin/MakeStaff";
 import ManageService from "./app/pages/dashboard/admin/ManageService";
+import Login from "./app/pages/auth/Login";
 
 const App = () => {
   return (
@@ -38,8 +39,8 @@ const App = () => {
           ></Route>
         </Route>
 
-        {/* <Route path='login' element={<Login></Login>}></Route>
-        <Route path='signup' element={<SignUp></SignUp>}></Route> */}
+        <Route path={routes.SIGNIN} element={<Login />}></Route>
+        {/* <Route path='signup' element={<SignUp></SignUp>}></Route> */}
 
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
