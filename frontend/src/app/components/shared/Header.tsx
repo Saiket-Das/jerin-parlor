@@ -76,12 +76,19 @@ const Header = () => {
             </ul>
           </div>
 
-          <a href="/appointment" className="flex items-center">
-            <img src={logo} className="mr-2 h-12 sm:h-9" alt="Flowbite Logo" />
-            <span className="self-center text-xl font-semibold whitespace-nowrap">
-              Jerin's Parlor
-            </span>
-          </a>
+          {/* --------- LOGO --------- */}
+          <Link to="/">
+            <div className="flex items-center">
+              <img
+                src={logo}
+                className="mr-2 h-12 sm:h-9"
+                alt="Flowbite Logo"
+              />
+              <span className="self-center text-xl font-semibold whitespace-nowrap">
+                Jerin's Parlor
+              </span>
+            </div>
+          </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
