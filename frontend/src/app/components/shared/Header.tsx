@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <div className="lg:mx-[130px]">
-      <div className="bg-base-100 py-2">
+      <div className=" py-5">
         <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
@@ -75,7 +75,7 @@ const Header = () => {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {menuItems}
-                <li>
+                <li className="hover:none">
                   <AppButton navigate={routes.SIGNIN}>Login</AppButton>
                 </li>
               </ul>
@@ -99,10 +99,8 @@ const Header = () => {
           </div>
 
           <div className="navbar-end hidden lg:flex">
-            <ul className="menu menu-horizontal p-0">
-              <li>
-                <AppButton navigate={routes.SIGNIN}>Login</AppButton>
-              </li>
+            <ul className="menu menu-horizontal">
+              <AppButton navigate={routes.SIGNIN}>Login</AppButton>
             </ul>
           </div>
 
