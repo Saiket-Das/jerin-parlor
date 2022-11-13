@@ -5,12 +5,12 @@ const OrderList = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th className="bg-base-300 capitalize">No</th>
-              <th className="bg-base-300 capitalize">Name</th>
-              <th className="bg-base-300 capitalize">Email</th>
-              <th className="bg-base-300 capitalize">Service</th>
-              <th className="bg-base-300 capitalize">Pay with</th>
-              <th className="bg-base-300 capitalize">Status</th>
+              <th className="bg-base-300 capitalize text-base">No</th>
+              <th className="bg-base-300 capitalize text-base">Name</th>
+              <th className="bg-base-300 capitalize text-base">Email</th>
+              <th className="bg-base-300 capitalize text-base">Service</th>
+              <th className="bg-base-300 capitalize text-base">Pay with</th>
+              <th className="bg-base-300 capitalize text-base">Status</th>
             </tr>
           </thead>
           <tbody>

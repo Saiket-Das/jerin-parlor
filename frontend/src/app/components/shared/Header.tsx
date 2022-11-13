@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <div className="lg:mx-[130px]">
-      <div className=" py-5">
+      <div className="lg:py-5">
         <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
