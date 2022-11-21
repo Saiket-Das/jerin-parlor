@@ -6,7 +6,7 @@ const Review = () => {
   return (
     <div className="flex flex-wrap -m-3">
       <div className=" p-3">
-        <div className="p-6 h-full bg-white bg-opacity-60 border rounded-xl">
+        <div className="p-6 h-full bg-white bg-opacity-60 rounded-xl">
           <div className="flex flex-col justify-between h-full">
             <div className="mb-5 block">
               <div className="flex flex-wrap mb-4 -m-2">
@@ -20,13 +20,13 @@ const Review = () => {
                   <p className="text-gray-500 uppercase">@brooklysim</p>
                 </div>
               </div>
-              <p className="text-lg font-medium">
+              <p className="font-light">
                 If you haven&rsquo;t tried out Flaro App yet, I would definitely
                 recommend it for both designers and developers
                 &#x1F919;&#x1F3FB;
               </p>
             </div>
-            <div className="rating mb-3">
+            <div className="rating mb-3 w-24">
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
               <input type="radio" name="rating-1" className="mask mask-star" />
