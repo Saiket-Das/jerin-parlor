@@ -14,7 +14,7 @@ import Link from "../../components/shared/CustomLink";
 import routes from "../../confiq/routes";
 
 const Dashboard = () => {
-  const user = true;
+  const user = false;
   const admin = true;
   return (
     <div>
@@ -27,11 +27,11 @@ const Dashboard = () => {
         <div className="drawer-content bg-base-300 rounded-sm px-10 pt-12">
           <Outlet></Outlet>
         </div>
+
+        {/* ------ WEB SIDE DRWAER ------*/}
         <div className="drawer-side">
           <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-3 lg:mx-5 lg:px-6 overflow-y-auto w-56 bg-base-100 text-base-content">
-            {/* <!-- Sidebar content here --> */}
-
+          <ul className="menu p-3 lg:mx-5 lg:px-6 overflow-y-aut w-56 bg-base-100 text-base-content">
             {user && (
               <>
                 <li>
