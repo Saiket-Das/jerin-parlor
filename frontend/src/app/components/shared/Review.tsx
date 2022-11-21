@@ -2,10 +2,10 @@ import React from "react";
 
 import avatar from "../../assets/images/Hero/hero.jpg";
 
-const Testimonial = () => {
+const Review = () => {
   return (
     <div className="flex flex-wrap -m-3">
-      <div className="w-full md:w-1/2 lg:w-1/3 p-3">
+      <div className=" p-3">
         <div className="p-6 h-full bg-white bg-opacity-60 border rounded-xl">
           <div className="flex flex-col justify-between h-full">
             <div className="mb-5 block">
@@ -44,4 +44,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Review;
