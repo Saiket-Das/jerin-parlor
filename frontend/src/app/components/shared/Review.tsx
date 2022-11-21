@@ -1,5 +1,3 @@
-import React from "react";
-
 import avatar from "../../assets/images/Hero/hero.jpg";
 
 const Review = () => {
