@@ -7,7 +7,7 @@ const Services = () => {
         Our Awesome <span className="text-primary">Services</span>
       </h2>
 
-      <div className="mt-[72px] grid grid-cols-3  gap-10">
+      <div className="mt-[72px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <Card />
         <Card />
         <Card />
