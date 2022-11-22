@@ -4,7 +4,7 @@ import heroImg from "../../assets/images/Hero/hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="bg-white my-10">
+    <section className="bg-white my-10 mx-6 md:mx-20 lg:mx-36">
       <div className="lg:flex justify-around gap-32">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">

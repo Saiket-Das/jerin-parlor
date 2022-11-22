@@ -3,7 +3,7 @@ import heroImg from "../../assets/images/Hero/hero.jpg";
 
 const HappyCustomer = () => {
   return (
-    <section className="bg-white my-10">
+    <section className="pt-32 pb-24 bg-base-200 px-6 md:px-20 lg:px-36">
       <div className="lg:flex justify-around gap-32">
         <div className="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
           <img
