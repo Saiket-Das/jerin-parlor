@@ -1,10 +1,21 @@
 import Button from "../shared/AppButton";
+import AppButton from "../shared/AppButton";
+
 import heroImg from "../../assets/images/Hero/hero.jpg";
+import { Link } from "react-router-dom";
 
 const HappyCustomer = () => {
   return (
-    <section className="pt-32 pb-24 bg-base-200 px-6 md:px-20 lg:px-36">
-      <div className="lg:flex justify-around gap-32">
+    <section className="bg-base-200 px-6 md:px-20 lg:px-36">
+      <div className="flex justify-center ">
+        <div className="absolute -m-6">
+          <Link to="/dashboard">
+            <AppButton>Explore more</AppButton>
+          </Link>
+        </div>
+      </div>
+
+      <div className="lg:flex justify-around gap-32 pt-32 pb-24">
         <div className="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
           <img
             src={heroImg}
