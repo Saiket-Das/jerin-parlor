@@ -1,11 +1,18 @@
-import AppButton from "../shared/AppButton";
-
+import Button from "../shared/AppButton";
 import heroImg from "../../assets/images/Hero/hero.jpg";
 
-const Hero = () => {
+const HappyCustomer = () => {
   return (
     <section className="bg-white my-10">
       <div className="lg:flex justify-around gap-32">
+        <div className="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            src={heroImg}
+            alt="mockup"
+            className="rounded-md lg:h-[478px] lg:w-[484px]"
+          />
+        </div>
+
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">
             BEAUTY SALON
@@ -18,18 +25,11 @@ const Hero = () => {
             nails, skin, and body healthy and beautiful. ·
           </p>
 
-          <AppButton navigate="/home">Get an appointment</AppButton>
-        </div>
-        <div className="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
-          <img
-            src={heroImg}
-            alt="mockup"
-            className="rounded-md lg:h-[478px] lg:w-[484px]"
-          />
+          <Button navigate="/home">Get an appointment</Button>
         </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HappyCustomer;
