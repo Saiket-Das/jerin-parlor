@@ -16,37 +16,38 @@ import Login from "./app/pages/auth/Login";
 import Register from "./app/pages/auth/Register";
 
 import "./App.css";
+import Layout from "./app/layout/Layout";
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path={routes.HOME} element={<Home />}></Route>
 
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path={routes.HOME} element={<Home />}></Route>
+          <Route path={routes.DASHBOARD} element={<Dashboard />}>
+            {/* Nested routes into DASHBOARD */}
+            <Route index element={<Book />}></Route>
+            <Route path={routes.BOOKING_LIST} element={<BookingList />}></Route>
+            <Route path={routes.REVIEW} element={<Review />}></Route>
 
-        <Route path={routes.DASHBOARD} element={<Dashboard />}>
-          {/* Nested routes into DASHBOARD */}
-          <Route index element={<Book />}></Route>
-          <Route path={routes.BOOKING_LIST} element={<BookingList />}></Route>
-          <Route path={routes.REVIEW} element={<Review />}></Route>
+            {/* Admin  */}
+            <Route path={routes.ORDER_LIST} element={<OrderList />}></Route>
+            <Route path={routes.ADD_SERVICE} element={<AddService />}></Route>
+            <Route path={routes.MAKE_STAFF} element={<MakeStaff />}></Route>
+            <Route
+              path={routes.MANAGE_SERVICES}
+              element={<ManageService />}
+            ></Route>
+          </Route>
 
-          {/* Admin  */}
-          <Route path={routes.ORDER_LIST} element={<OrderList />}></Route>
-          <Route path={routes.ADD_SERVICE} element={<AddService />}></Route>
-          <Route path={routes.MAKE_STAFF} element={<MakeStaff />}></Route>
-          <Route
-            path={routes.MANAGE_SERVICES}
-            element={<ManageService />}
-          ></Route>
-        </Route>
+          <Route path={routes.SIGNIN} element={<Login />}></Route>
+          <Route path={routes.SIGNUP} element={<Register />}></Route>
 
-        <Route path={routes.SIGNIN} element={<Login />}></Route>
-        <Route path={routes.SIGNUP} element={<Register />}></Route>
-
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+      </Layout>
     </div>
   );
 };
