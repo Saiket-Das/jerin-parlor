@@ -1,5 +1,4 @@
 import Button from "../shared/AppButton";
-import AppButton from "../shared/AppButton";
 
 import heroImg from "../../assets/images/Hero/hero.jpg";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ const HappyCustomer = () => {
       <div className="flex justify-center">
         <div className="absolute -m-6">
           <Link to="/dashboard">
-            <AppButton>Explore more</AppButton>
+            <Button>Explore more</Button>
           </Link>
         </div>
       </div>

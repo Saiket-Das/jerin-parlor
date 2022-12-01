@@ -15,9 +15,11 @@ import ManageService from "./app/pages/dashboard/admin/ManageService";
 import Login from "./app/pages/auth/Login";
 import Register from "./app/pages/auth/Register";
 
+import "./App.css";
+
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <Header />
 
       <Routes>
