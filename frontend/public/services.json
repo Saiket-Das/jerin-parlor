@@ -1,6 +1,6 @@
 [
   {
-    "_id": 1,
+    "_id": "1",
     "name": "Anti Age Face Treatment",
     "description": "We craft stunning and amazing web UI, using a well drrafted UX to fit your product.",
     "price": 199,
@@ -8,7 +8,7 @@
   },
 
   {
-    "_id": 2,
+    "_id": "2",
     "name": "Hair Color & Styleing",
     "description": "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
     "price": 99,
@@ -16,7 +16,7 @@
   },
 
   {
-    "_id": 3,
+    "_id": "3",
     "name": "Skin Care Treatment",
     "description": "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
     "price": 299,
