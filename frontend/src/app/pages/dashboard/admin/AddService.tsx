@@ -5,20 +5,26 @@ import Textarea from "../../../components/shared/AppTextarea";
 const AddService = () => {
   return (
     <div>
-      <Input
-        type="text"
-        name="name"
-        placeholder="Enter title"
-        label="Service title"
-      />
+      <div className="mb-5">
+        <Input
+          type="text"
+          name="name"
+          placeholder="Enter title"
+          label="Service title"
+        />
+      </div>
 
-      <Input type="file" name="price" placeholder="" label="Image" />
+      <div className="mb-5">
+        <Input type="file" name="price" placeholder="" label="Image" />
+      </div>
 
-      <Textarea
-        name="comment"
-        placeholder="Enter description"
-        label="Description"
-      />
+      <div className="mb-5">
+        <Textarea
+          name="comment"
+          placeholder="Enter description"
+          label="Description"
+        />
+      </div>
 
       <Button>Submit</Button>
     </div>
