@@ -6,10 +6,10 @@ const MakeStaff = () => {
     <div className="bg-white p-4">
       <div className="flex gap-10 items-center ">
         <Input
-          label="Email"
+          // label="Email"
           type="text"
           name="email"
-          placeholder="Search by email..."
+          placeholder="Search by email"
         />
         <AppButton>Submit</AppButton>
       </div>

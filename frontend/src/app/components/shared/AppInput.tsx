@@ -21,8 +21,8 @@ const AppInput = ({
 }: Props) => {
   return (
     // <div>
-    <div className="mb-5" style={{ width: width }}>
-      <label className="font-medium">{label}</label>
+    <div className="" style={{ width: width }}>
+      {label && <label className="font-medium">{label}</label>}
 
       <input
         type={type}
@@ -30,7 +30,7 @@ const AppInput = ({
         height={height}
         readOnly={readOnly}
         placeholder={placeholder}
-        className={`w-full h-[${height}] rounded-md border-${borderColor} bg-white mt-2 py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
+        className={`w-full h-[${height}] rounded-md border-${borderColor} bg-white  py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
       />
     </div>
     // </div>
