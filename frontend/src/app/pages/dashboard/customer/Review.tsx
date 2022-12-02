@@ -5,15 +5,22 @@ import Textarea from "../../../components/shared/AppTextarea";
 const Review = () => {
   return (
     <div>
-      <Input type="text" name="Tname" placeholder="Enter your name" />
-      <Input
-        type="text"
-        name="email"
-        placeholder="ahanbryan@gmail.com"
-        readOnly={true}
-      />
+      <div className="mb-5">
+        <Input type="text" name="Tname" placeholder="Enter your name" />
+      </div>
 
-      <Textarea name="comment" placeholder="Your comment" />
+      <div className="mb-5">
+        <Input
+          type="text"
+          name="email"
+          placeholder="ahanbryan@gmail.com"
+          readOnly={true}
+        />
+      </div>
+
+      <div className="mb-5">
+        <Textarea name="comment" placeholder="Your comment" />
+      </div>
 
       <div className="mb-5">
         <div className="rating">
