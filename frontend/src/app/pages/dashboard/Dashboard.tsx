@@ -42,7 +42,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <Link to={routes.BOOKING_LIST}>
-                    <Icon icon={faHardDrive}></Icon>
+                    <Icon icon={faListCheck}></Icon>
                     Booking List
                   </Link>
                 </li>
