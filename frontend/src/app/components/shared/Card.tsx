@@ -1,18 +1,15 @@
 import faceCare from "../../assets/images/face-care.png";
 
-type Props = {
+interface Props {
   service: {
-    _id: string;
     name: string;
     description: string;
     price: number;
     imageUrl: string;
   };
-};
+}
 
-const Card = ({
-  service: { _id, name, description, price, imageUrl },
-}: Props) => {
+const Card = ({ service: { name, description, price, imageUrl } }: Props) => {
   return (
     <div className="card w-[370px] bg-base-100 hover:shadow-xl px-5">
       <div className="pt-7 flex justify-center ">

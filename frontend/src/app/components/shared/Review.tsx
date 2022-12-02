@@ -25,11 +25,31 @@ const Review = () => {
               </p>
             </div>
             <div className="rating mb-3 w-24">
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star bg-primary"
+              />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star bg-primary"
+              />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star bg-primary"
+              />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star bg-primary"
+              />
+              <input
+                type="radio"
+                name="rating-1"
+                className="mask mask-star bg-primary"
+              />
             </div>
 
             <div className="block">
