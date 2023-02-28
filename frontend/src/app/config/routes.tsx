@@ -1,5 +1,6 @@
 export default Object.freeze({
   HOME: "/home",
+  ABOUT: "/about",
   APPOINTMENT: "/appointment",
   CONTACT_US: "/contact-us",
   SIGNIN: "/login",
@@ -7,9 +8,9 @@ export default Object.freeze({
   DASHBOARD: "/dashboard",
   BOOK: "/dashboard",
   REVIEW: "review",
-  BOOKING_LIST: "booking/list",
-  ORDER_LIST: "order/list",
-  ADD_SERVICE: "add/service",
-  MAKE_STAFF: "make/staff",
-  MANAGE_SERVICES: "manage/services",
+  BOOKING_LIST: "booking-list",
+  ORDER_LIST: "order-list",
+  ADD_SERVICE: "add-service",
+  MAKE_STAFF: "make-staff",
+  MANAGE_SERVICES: "manage-services",
 });

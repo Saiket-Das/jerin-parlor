@@ -3,7 +3,7 @@ import Link from "./CustomLink";
 import AppButton from "./AppButton";
 import routes from "../../config/routes";
 
-import logo from "../../assets/images/Hero/logo.png";
+import logo from "../../assets/images/logo.png";
 import { useState } from "react";
 
 const Header = () => {
