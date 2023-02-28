@@ -1,4 +1,3 @@
-import "./App.css";
 import Layout from "./app/layout/Layout";
 import ReactRoutes from "./app/routes/ReactRoutes";
 

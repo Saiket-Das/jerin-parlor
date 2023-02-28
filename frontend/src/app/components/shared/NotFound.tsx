@@ -3,7 +3,7 @@ import routes from "../../config/routes";
 
 const NotFound = () => {
   return (
-    <main className="h-[70vh] w-full flex flex-col justify-center items-center">
+    <main className="h-[60vh] w-full flex flex-col justify-center items-center">
       <h1 className="text-9xl font-extrabold text-black tracking-widest">
         404
       </h1>
