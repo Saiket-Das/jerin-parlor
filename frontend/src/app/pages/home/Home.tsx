@@ -8,6 +8,7 @@ import {
   HappyCustomer,
   Testimonial,
 } from "../../components/home/index";
+import Loading from "../../components/shared/Loading";
 
 const Home = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Home = () => {
         <Services />
         <HappyCustomer />
         <Testimonial />
+        <Loading />
       </div>
       <Footer />
     </div>

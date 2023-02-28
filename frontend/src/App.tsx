@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "./app/components/shared/Loading";
 import Layout from "./app/layout/Layout";
 import ReactRoutes from "./app/routes/ReactRoutes";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  setTimeout(() => {
-    <Loading />;
-    setLoading(false);
-  }, 2000);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+  }, []);
   return (
     <div className="app">
-      {!loading && (
+      {loading ? (
+        <Loading />
+      ) : (
         <Layout>
           <ReactRoutes />
         </Layout>

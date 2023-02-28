@@ -11,7 +11,9 @@
   background: #555;
 } */
 
-/* .App {
+/*
+.App {
+  display: flex;
   text-align: center;
 }
 
