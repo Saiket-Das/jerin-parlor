@@ -1,17 +1,21 @@
 import { Routes, Route } from "react-router-dom";
+
 import NotFound from "../components/shared/NotFound";
 import routes from "../config/routes";
-import Login from "../pages/auth/Login";
-import Register from "../pages/auth/Register";
-import AddService from "../pages/dashboard/admin/AddService";
-import MakeStaff from "../pages/dashboard/admin/MakeStaff";
-import ManageService from "../pages/dashboard/admin/ManageService";
-import OrderList from "../pages/dashboard/admin/OrderList";
-import Book from "../pages/dashboard/customer/Book";
-import BookingList from "../pages/dashboard/customer/BookingList";
-import Review from "../pages/dashboard/customer/Review";
-import Dashboard from "../pages/dashboard/Dashboard";
-import Home from "../pages/home/Home";
+
+import {
+  Home,
+  Login,
+  Register,
+  Dashboard,
+  Book,
+  BookingList,
+  Review,
+  OrderList,
+  AddService,
+  MakeStaff,
+  ManageService,
+} from "../pages/index";
 
 const ReactRoutes = () => (
   <Routes>

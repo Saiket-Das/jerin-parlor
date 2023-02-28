@@ -1,7 +1,9 @@
 import Header from "../components/shared/Header";
+
 type Props = {
   children: JSX.Element;
 };
+
 const Layout = ({ children }: Props) => {
   return (
     <div>

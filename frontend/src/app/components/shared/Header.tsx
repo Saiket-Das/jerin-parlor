@@ -1,24 +1,31 @@
 import Link from "./CustomLink";
-import logo from "../../assets/images/Hero/logo.png";
-import routes from "../../config/routes";
+
 import AppButton from "./AppButton";
+import routes from "../../config/routes";
+
+import logo from "../../assets/images/Hero/logo.png";
+import { useState } from "react";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
+  const [user, setUser] = useState(true);
+  const logout = () => {
+    setUser(!user);
 
-  // const logout = () => {
-  //     signOut(auth);
-  //     localStorage.removeItem('accessToken')
-  // };
+    console.log(user);
+
+    // signOut(auth);
+    // localStorage.removeItem('accessToken')
+  };
 
   const menuItems = (
     <>
       <li>
         <Link to={routes.HOME}>Home</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to={routes.HOME}>About</Link>
-      </li>
+      </li> */}
       <li>
         <Link to={routes.APPOINTMENT}>Appoinment</Link>
       </li>
@@ -28,23 +35,6 @@ const Header = () => {
       <li>
         <Link to={routes.DASHBOARD}>Dashboard</Link>
       </li>
-      {/* 
-        {
-            user && <li><Link to='/dashboard'>Dashboard</Link></li>
-        }
-
-        {
-            user
-                ?
-                <button className="btn btn-ghost text-xs mt-1"
-                    onClick={logout}>
-                    Sign out
-                </button>
-                :
-                <li>
-                    <Link to='/login'>Login</Link>
-                </li>
-        } */}
     </>
   );
 
@@ -52,6 +42,8 @@ const Header = () => {
     <div className="lg:mx-[130px]">
       <div className="lg:py-5">
         <div className="navbar ">
+          {/* ------------ Mobile ------------ */}
+
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -75,9 +67,16 @@ const Header = () => {
                 className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
               >
                 {menuItems}
-                <li className="hover:none">
-                  <AppButton navigate={routes.SIGNIN}>Login</AppButton>
-                </li>
+
+                {user ? (
+                  <li className="hover:none">
+                    <AppButton onClick={logout}>Sign out</AppButton>
+                  </li>
+                ) : (
+                  <li className="hover:none">
+                    <AppButton navigate={routes.SIGNIN}>Login</AppButton>
+                  </li>
+                )}
               </ul>
             </div>
             <Link to="/">
@@ -94,14 +93,21 @@ const Header = () => {
             </Link>
           </div>
 
+          {/* ------------ Web ------------ */}
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{menuItems}</ul>
           </div>
 
           <div className="navbar-end hidden lg:flex">
-            <ul className="menu menu-horizontal">
-              <AppButton navigate={routes.SIGNIN}>Login</AppButton>
-            </ul>
+            {user ? (
+              <ul className="menu menu-horizontal">
+                <AppButton onClick={logout}>Sign out</AppButton>
+              </ul>
+            ) : (
+              <ul className="menu menu-horizontal">
+                <AppButton navigate={routes.SIGNIN}>Login</AppButton>
+              </ul>
+            )}
           </div>
 
           <div className="navbar-end lg:hidden flex">
