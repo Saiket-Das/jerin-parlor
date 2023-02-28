@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import {
   faCartShopping,
-  faHardDrive,
   faMessage,
   faListCheck,
   faPlus,
