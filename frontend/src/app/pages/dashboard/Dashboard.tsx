@@ -12,10 +12,16 @@ import {
 import Icon from "../../components/shared/Icon";
 import Link from "../../components/shared/CustomLink";
 import routes from "../../config/routes";
+import { useEffect } from "react";
 
 const Dashboard = () => {
   const user = true;
   const admin = true;
+
+  useEffect(() => {
+    document.title = "Dashboard";
+  });
+
   return (
     <div>
       <div className="drawer drawer-mobile">

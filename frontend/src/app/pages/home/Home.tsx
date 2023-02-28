@@ -1,10 +1,19 @@
-import HappyCustomer from "../../components/home/HappyCustomer";
-import Hero from "../../components/home/Hero";
-import Services from "../../components/home/Services";
-import Testimonial from "../../components/home/Testimonial";
+import { useEffect } from "react";
+
 import Footer from "../../components/shared/Footer";
 
+import {
+  Hero,
+  Services,
+  HappyCustomer,
+  Testimonial,
+} from "../../components/home/index";
+
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  });
+
   return (
     <div>
       <div>
