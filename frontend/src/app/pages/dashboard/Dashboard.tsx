@@ -11,7 +11,7 @@ import {
 
 import Icon from "../../components/shared/Icon";
 import Link from "../../components/shared/CustomLink";
-import routes from "../../confiq/routes";
+import routes from "../../config/routes";
 
 const Dashboard = () => {
   const user = true;

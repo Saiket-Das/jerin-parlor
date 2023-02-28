@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import routes from "../../confiq/routes";
+import routes from "../../config/routes";
 
 const NotFound = () => {
   return (

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../components/shared/NotFound";
-import routes from "../confiq/routes";
+import routes from "../config/routes";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import AddService from "../pages/dashboard/admin/AddService";

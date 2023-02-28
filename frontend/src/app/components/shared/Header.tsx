@@ -1,6 +1,6 @@
 import Link from "./CustomLink";
 import logo from "../../assets/images/Hero/logo.png";
-import routes from "../../confiq/routes";
+import routes from "../../config/routes";
 import AppButton from "./AppButton";
 
 const Header = () => {
