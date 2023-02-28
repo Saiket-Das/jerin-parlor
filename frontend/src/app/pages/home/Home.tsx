@@ -22,7 +22,6 @@ const Home = () => {
         <Services />
         <HappyCustomer />
         <Testimonial />
-        <Loading />
       </div>
       <Footer />
     </div>

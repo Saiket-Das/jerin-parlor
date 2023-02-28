@@ -20,7 +20,8 @@ const Hero = () => {
 
           <AppButton navigate="/home">Get an appointment</AppButton>
         </div>
-        <div className="mt-5 lg:mt-0 lg:col-span-5 lg:flex">
+
+        <div className="mt-10 lg:mt-0 lg:col-span-5 lg:flex">
           <img
             src={heroImg}
             alt="mockup"

@@ -23,10 +23,10 @@ const HappyCustomer = () => {
           />
         </div>
 
-        <div className="mr-auto place-self-center lg:col-span-7 mt-10 md:mt-0 lg:mt-0">
+        <div className="mr-auto place-self-center lg:col-span-7 mt-10 md:mt-10 lg:mt-0">
           <div className="max-w-2xl mb-4 text-3xl font-semibold tracking-tight leading-none md:text-4xl lg:text-4xl">
             <h2>Let us handle your</h2>
-            <h2>
+            <h2 className="mt-2">
               skin <span className="text-primary">Professionally.</span>
             </h2>
           </div>
