@@ -4,10 +4,17 @@ type Props = {
   children: string;
   navigate?: string;
   width?: string;
+  color?: string;
   onClick?: any;
 };
 
-const AppButton = ({ children, onClick, navigate, width }: Props) => {
+const AppButton = ({
+  children,
+  onClick,
+  navigate,
+  width,
+  color = "bg-primary",
+}: Props) => {
   return (
     <>
       {navigate ? (
@@ -22,7 +29,7 @@ const AppButton = ({ children, onClick, navigate, width }: Props) => {
       ) : (
         <button
           type="button"
-          className={`inline-block w-[${width}]  px-9 py-3 bg-primary text-white font-medium leading-snug rounded shadow-sm hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none active:shadow-lg transition duration-150 ease-in-out`}
+          className={`inline-block w-[${width}]  px-9 py-3 ${color} text-white font-medium leading-snug rounded shadow-sm hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none active:shadow-lg transition duration-150 ease-in-out`}
           onClick={onClick}
         >
           {children}
