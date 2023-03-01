@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import NotFound from "../components/shared/NotFound";
 import routes from "../config/routes";
 
 import {
@@ -15,6 +14,7 @@ import {
   AddService,
   MakeStaff,
   ManageService,
+  NotFound,
 } from "../pages/index";
 
 const ReactRoutes = () => (

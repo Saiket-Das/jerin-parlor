@@ -1,10 +1,9 @@
-import Link from "./CustomLink";
+import { useState } from "react";
 
-import { Button } from "./index";
+import { Button, CustomLink } from "./index";
 import routes from "../../config/routes";
 
 import logo from "../../assets/images/logo.png";
-import { useState } from "react";
 
 const Header = () => {
   // const [user] = useAuthState(auth);
@@ -21,19 +20,19 @@ const Header = () => {
   const menuItems = (
     <>
       <li>
-        <Link to={routes.HOME}>Home</Link>
+        <CustomLink to={routes.HOME}>Home</CustomLink>
       </li>
       {/* <li>
-        <Link to={routes.HOME}>About</Link>
+        <CustomLink to={routes.HOME}>About</CustomLink>
       </li> */}
       <li>
-        <Link to={routes.APPOINTMENT}>Appoinment</Link>
+        <CustomLink to={routes.APPOINTMENT}>Appoinment</CustomLink>
       </li>
       <li>
-        <Link to={routes.CONTACT_US}>Contact us</Link>
+        <CustomLink to={routes.CONTACT_US}>Contact us</CustomLink>
       </li>
       <li>
-        <Link to={routes.DASHBOARD}>Dashboard</Link>
+        <CustomLink to={routes.DASHBOARD}>Dashboard</CustomLink>
       </li>
     </>
   );
@@ -79,7 +78,7 @@ const Header = () => {
                 )}
               </ul>
             </div>
-            <Link to="/">
+            <CustomLink to="/">
               <div className="flex items-center">
                 <img
                   src={logo}
@@ -90,7 +89,7 @@ const Header = () => {
                   Jerin's Parlor
                 </h2>
               </div>
-            </Link>
+            </CustomLink>
           </div>
 
           {/* ------------ Web ------------ */}

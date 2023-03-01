@@ -1,4 +1,4 @@
-import Review from "../shared/Review";
+import { Review } from "../shared/index";
 
 const Testimonial = () => {
   return (

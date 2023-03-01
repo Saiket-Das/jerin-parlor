@@ -7,9 +7,8 @@ export { default as Header } from "./Header";
 // export { default as Footer } from "./Footer";
 
 export { default as Loading } from "./Loading";
-export { default as NotFound } from "./NotFound";
 export { default as Review } from "./Review";
 
 export { default as CustomLink } from "./CustomLink";
 
-export { default as Card } from "./Card";
+export { default as ServiceCard } from "./Card";

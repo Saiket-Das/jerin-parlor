@@ -18,3 +18,6 @@ export { default as OrderList } from "./dashboard/admin/OrderList";
 export { default as Book } from "./dashboard/customer/Book";
 export { default as BookingList } from "./dashboard/customer/BookingList";
 export { default as Review } from "./dashboard/customer/Review";
+
+// Error
+export { default as NotFound } from "./error/NotFound";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "../shared/Card";
+import { ServiceCard } from "../shared/index";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -18,7 +18,7 @@ const Services = () => {
 
       <div className="mt-10 lg:mt-[72px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 lg:gap-10">
         {services.map((service, index) => (
-          <Card key={index} service={service} />
+          <ServiceCard key={index} service={service} />
         ))}
       </div>
     </div>
