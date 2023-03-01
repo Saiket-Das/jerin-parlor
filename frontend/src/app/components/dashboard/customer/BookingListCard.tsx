@@ -13,20 +13,20 @@ const BookingListCard = ({
   service: { name, description, price, imageUrl },
 }: Props) => {
   return (
-    <div className=" card w-[370px] bg-base-100 hover:shadow-xl p-5">
+    <div className="card w-[370px] bg-base-100 hover:shadow-md p-5">
       <div className="flex justify-between">
         <div className="bg-primary h-16 w-16 rounded-full flex justify-center items-center">
           <img src={faceCare} alt="Shoes" className="rounded-xl w-12 h-12" />
         </div>
 
-        <button className="h-10 bg-red-200 text-red-500 font-semibold py-2 px-4 rounded">
+        <button className="h-10 bg-red-100 text-red-500 font-semibold py-2 px-4 rounded">
           Pending
         </button>
       </div>
 
       <div>
         <h2 className="font-semibold text-xl pt-5">{name}</h2>
-        <p className="font-light text-gray-400">{description}</p>
+        <p className="font-light text-gray-400 mt-2">{description}</p>
       </div>
     </div>
   );
