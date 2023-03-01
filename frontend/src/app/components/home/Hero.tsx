@@ -1,4 +1,4 @@
-import AppButton from "../shared/AppButton";
+import { Button } from "../shared/index";
 
 import heroImg from "../../assets/images/Hero/hero.jpg";
 
@@ -18,7 +18,7 @@ const Hero = () => {
             nails, skin, and body healthy and beautiful.
           </p>
 
-          <AppButton navigate="/home">Get an appointment</AppButton>
+          <Button navigate="/home">Get an appointment</Button>
         </div>
 
         <div className="mt-10 lg:mt-0 lg:col-span-5 lg:flex">

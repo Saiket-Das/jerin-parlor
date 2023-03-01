@@ -1,6 +1,4 @@
-import Button from "../../../components/shared/AppButton";
-import Input from "../../../components/shared/AppInput";
-import Textarea from "../../../components/shared/AppTextarea";
+import { Button, Input, Textarea } from "../../../components/shared/index";
 
 const Review = () => {
   return (

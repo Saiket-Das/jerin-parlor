@@ -1,6 +1,6 @@
 import Link from "./CustomLink";
 
-import AppButton from "./AppButton";
+import { Button } from "./index";
 import routes from "../../config/routes";
 
 import logo from "../../assets/images/logo.png";
@@ -70,11 +70,11 @@ const Header = () => {
 
                 {user ? (
                   <li className="hover:none">
-                    <AppButton onClick={logout}>Sign out</AppButton>
+                    <Button onClick={logout}>Sign out</Button>
                   </li>
                 ) : (
                   <li className="hover:none">
-                    <AppButton navigate={routes.SIGNIN}>Login</AppButton>
+                    <Button navigate={routes.SIGNIN}>Login</Button>
                   </li>
                 )}
               </ul>
@@ -101,11 +101,11 @@ const Header = () => {
           <div className="navbar-end hidden lg:flex">
             {user ? (
               <ul className="menu menu-horizontal">
-                <AppButton onClick={logout}>Sign out</AppButton>
+                <Button onClick={logout}>Sign out</Button>
               </ul>
             ) : (
               <ul className="menu menu-horizontal">
-                <AppButton navigate={routes.SIGNIN}>Login</AppButton>
+                <Button navigate={routes.SIGNIN}>Login</Button>
               </ul>
             )}
           </div>

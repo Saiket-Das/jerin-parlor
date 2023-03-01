@@ -1,7 +1,8 @@
-import Button from "../shared/AppButton";
+import { Link } from "react-router-dom";
+
+import { Button } from "../shared/index";
 
 import heroImg from "../../assets/images/Hero/hero.jpg";
-import { Link } from "react-router-dom";
 
 const HappyCustomer = () => {
   return (

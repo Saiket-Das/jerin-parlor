@@ -1,4 +1,4 @@
-import Header from "../components/shared/Header";
+import { Header } from "../components/shared/index";
 
 type Props = {
   children: JSX.Element;

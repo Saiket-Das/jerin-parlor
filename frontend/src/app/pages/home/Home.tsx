@@ -8,7 +8,6 @@ import {
   HappyCustomer,
   Testimonial,
 } from "../../components/home/index";
-import Loading from "../../components/shared/Loading";
 
 const Home = () => {
   useEffect(() => {

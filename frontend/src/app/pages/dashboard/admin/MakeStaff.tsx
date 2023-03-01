@@ -1,5 +1,4 @@
-import AppButton from "../../../components/shared/AppButton";
-import Input from "../../../components/shared/AppInput";
+import { Button, Input } from "../../../components/shared/index";
 
 const MakeStaff = () => {
   return (
@@ -11,7 +10,7 @@ const MakeStaff = () => {
           name="email"
           placeholder="Search by email"
         />
-        <AppButton>Submit</AppButton>
+        <Button>Submit</Button>
       </div>
     </div>
   );

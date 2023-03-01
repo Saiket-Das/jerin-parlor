@@ -1,5 +1,4 @@
-import Button from "../../../components/shared/AppButton";
-import Input from "../../../components/shared/AppInput";
+import { Button, Input } from "../../../components/shared/index";
 
 const Book = () => {
   return (

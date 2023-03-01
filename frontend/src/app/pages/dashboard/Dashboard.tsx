@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import {
   faCartShopping,
@@ -8,10 +9,9 @@ import {
   faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 
-import Icon from "../../components/shared/Icon";
-import Link from "../../components/shared/CustomLink";
+import { Icon, CustomLink } from "../../components/shared/index";
+
 import routes from "../../config/routes";
-import { useEffect } from "react";
 
 const Dashboard = () => {
   const user = true;
@@ -40,22 +40,22 @@ const Dashboard = () => {
             {user && (
               <>
                 <li>
-                  <Link to={routes.BOOK}>
+                  <CustomLink to={routes.BOOK}>
                     <Icon icon={faCartShopping}></Icon>
                     Book
-                  </Link>
+                  </CustomLink>
                 </li>
                 <li>
-                  <Link to={routes.BOOKING_LIST}>
+                  <CustomLink to={routes.BOOKING_LIST}>
                     <Icon icon={faListCheck}></Icon>
                     Booking List
-                  </Link>
+                  </CustomLink>
                 </li>
                 <li>
-                  <Link to={routes.REVIEW}>
+                  <CustomLink to={routes.REVIEW}>
                     <Icon icon={faMessage}></Icon>
                     Review
-                  </Link>
+                  </CustomLink>
                 </li>
               </>
             )}
@@ -63,30 +63,30 @@ const Dashboard = () => {
             {admin && (
               <>
                 <li>
-                  <Link to={routes.ORDER_LIST}>
+                  <CustomLink to={routes.ORDER_LIST}>
                     <Icon icon={faListCheck}></Icon>
                     Order List
-                  </Link>
+                  </CustomLink>
                 </li>
 
                 <li>
-                  <Link to={routes.ADD_SERVICE}>
+                  <CustomLink to={routes.ADD_SERVICE}>
                     <Icon icon={faPlus}></Icon>
                     Add Service
-                  </Link>
+                  </CustomLink>
                 </li>
                 <li>
-                  <Link to={routes.MAKE_STAFF}>
+                  <CustomLink to={routes.MAKE_STAFF}>
                     <Icon icon={faUserPlus}></Icon>
                     Make Staff
-                  </Link>
+                  </CustomLink>
                 </li>
 
                 <li>
-                  <Link to={routes.MANAGE_SERVICES}>
+                  <CustomLink to={routes.MANAGE_SERVICES}>
                     <Icon icon={faEdit}></Icon>
                     Manage Services
-                  </Link>
+                  </CustomLink>
                 </li>
               </>
             )}

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import Loading from "./app/components/shared/Loading";
+
 import Layout from "./app/layout/Layout";
+
 import ReactRoutes from "./app/routes/ReactRoutes";
+
+import { Loading } from "./app/components/shared/index";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -10,7 +13,7 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 500);
   }, []);
   return (
     <div className="app">
