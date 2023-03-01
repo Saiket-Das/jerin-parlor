@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="mt-[60px]">
-      <footer className="footer p-10 bg-primary flex justify-around text-white">
+    <footer className="mt-[60px]">
+      <div className="footer p-10 bg-primary grid grid-cols-2 md:flex lg:flex justify-around text-white">
+        {/* ------> Company details */}
         <div>
           <svg
             width="50"
@@ -23,6 +24,7 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* ------> Our services */}
         <div>
           <span className="footer-title">Services</span>
           <Link to="/" className="link link-hover">
@@ -36,6 +38,7 @@ const Footer = () => {
           </Link>
         </div>
 
+        {/* ------> Site routes */}
         <div>
           <span className="footer-title">Company</span>
           <Link to="/dashboard" className="link link-hover">
@@ -49,6 +52,7 @@ const Footer = () => {
           </Link>
         </div>
 
+        {/* ------> Company policies */}
         <div>
           <span className="footer-title">Legal</span>
           <Link to="/" className="link link-hover">
@@ -61,8 +65,8 @@ const Footer = () => {
             Cookie policy
           </Link>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

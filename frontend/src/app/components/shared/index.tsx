@@ -4,7 +4,7 @@ export { default as Textarea } from "./AppTextarea";
 export { default as Icon } from "./Icon";
 
 export { default as Header } from "./Header";
-// export { default as Footer } from "./Footer";
+export { default as Footer } from "./Footer";
 
 export { default as Loading } from "./Loading";
 export { default as Review } from "./Review";
