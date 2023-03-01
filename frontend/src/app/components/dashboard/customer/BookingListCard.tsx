@@ -6,22 +6,29 @@ interface Props {
     description: string;
     price: number;
     imageUrl: string;
+    status: string;
   };
 }
 
 const BookingListCard = ({
-  service: { name, description, price, imageUrl },
+  service: { name, description, status, price, imageUrl },
 }: Props) => {
   return (
     <div className="card w-[370px] bg-base-100 hover:shadow-md p-5">
       <div className="flex justify-between">
-        <div className="bg-primary h-16 w-16 rounded-full flex justify-center items-center">
+        <div className="bg-red-50 h-16 w-16 rounded-full flex justify-center items-center">
           <img src={faceCare} alt="Shoes" className="rounded-xl w-12 h-12" />
         </div>
 
-        <button className="h-10 bg-red-100 text-red-500 font-semibold py-2 px-4 rounded">
-          Pending
-        </button>
+        {status === "Pending" ? (
+          <button className="h-10 bg-red-100 text-red-500 font-semibold py-2 px-5 rounded">
+            Pending
+          </button>
+        ) : (
+          <button className="h-10 bg-green-100 text-green-500 font-semibold py-2 px-5 rounded">
+            Done
+          </button>
+        )}
       </div>
 
       <div>

@@ -40,6 +40,24 @@ const BookingList = () => {
       imageUrl: "../src/app/assets/images/hair-care.png",
       status: "Pending",
     },
+    {
+      _id: "3",
+      name: "Skin Care Treatment",
+      description:
+        "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
+      price: 299,
+      imageUrl: "../src/app/assets/images/hair-care.png",
+      status: "Done",
+    },
+    {
+      _id: "3",
+      name: "Skin Care Treatment",
+      description:
+        "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
+      price: 299,
+      imageUrl: "../src/app/assets/images/hair-care.png",
+      status: "Pending",
+    },
   ];
 
   return (
