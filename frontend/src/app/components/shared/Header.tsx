@@ -68,11 +68,11 @@ const Header = () => {
                 {menuItems}
 
                 {user ? (
-                  <li className="hover:none">
+                  <li>
                     <Button onClick={logout}>Sign out</Button>
                   </li>
                 ) : (
-                  <li className="hover:none">
+                  <li>
                     <Button navigate={routes.SIGNIN}>Login</Button>
                   </li>
                 )}
