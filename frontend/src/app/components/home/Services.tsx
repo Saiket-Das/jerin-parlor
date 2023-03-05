@@ -1,14 +1,25 @@
 import { useEffect, useState } from "react";
 import { ServiceCard } from "../shared/index";
 
+import useApi from "../../hooks/useApi";
+import serviceApi from "../../api/service";
+
 const Services = () => {
-  const [services, setServices] = useState([]);
+  // const [services, setServices] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("services.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setServices(data));
+  // }, []);
+
+  const serviceData = useApi(serviceApi.getServices);
 
   useEffect(() => {
-    fetch("services.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
+    serviceData.request();
   }, []);
+
+  console.log(serviceData?.data);
 
   return (
     <div className="mt-32 mb-24 mx-0 md:mx-20 lg:mx-36">
@@ -17,9 +28,9 @@ const Services = () => {
       </h2>
 
       <div className="mt-10 lg:mt-[72px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 lg:gap-10">
-        {services.map((service, index) => (
+        {/* {serviceData?.data.map((service, index) => (
           <ServiceCard key={index} service={service} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
