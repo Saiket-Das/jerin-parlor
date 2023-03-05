@@ -9,7 +9,18 @@ import {
   Testimonial,
 } from "../../components/home/index";
 
+import useApi from "../../hooks/useApi";
+import serviceApi from "../../api/service";
+
 const Home = () => {
+  // const serviceData = useApi(serviceApi.getServices);
+
+  // useEffect(() => {
+  //   serviceData.request();
+  // }, []);
+
+  // console.log(serviceData?.data.data);
+
   useEffect(() => {
     document.title = "Home";
   });

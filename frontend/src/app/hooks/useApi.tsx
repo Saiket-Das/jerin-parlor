@@ -12,7 +12,7 @@ const useApi = (apiFunc: any) => {
     setLoading(false);
 
     setError(!response.ok);
-    setData(response.data);
+    setData(response?.data?.data);
 
     return response;
   };
