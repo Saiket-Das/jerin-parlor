@@ -9,7 +9,7 @@ const postNewReview = async (data: any) => {
 };
 
 const deleteReview = async (id: string) => {
-  return await client.delete(`/api/review/${id}`);
+  await client.delete(`/api/review/${id}`);
 };
 
 export default {
