@@ -1,11 +1,6 @@
 import client from "./client";
 
-type Props = {
-  email: string;
-  password: string;
-};
-
-const signin = ({ email, password }: Props) =>
+const login = (email: string, password: string) =>
   client.post("/api/auth/login", { email, password });
 
-export default { signin };
+export default { login };
