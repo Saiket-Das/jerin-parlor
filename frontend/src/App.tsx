@@ -17,6 +17,7 @@ const App = () => {
       setLoading(false);
     }, 500);
   }, []);
+
   return (
     <div className="app">
       {loading ? (
