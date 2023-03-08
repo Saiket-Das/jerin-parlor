@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 type Props = {
   children: string;
   navigate?: string;
-  width?: string;
+  width?: number;
   color?: string;
   onClick?: any;
 };
@@ -31,7 +31,7 @@ const AppButton = ({
       ) : (
         <button
           type="button"
-          className={`inline-block w-[${width}]  px-9 py-3 ${color} text-white font-medium leading-snug rounded shadow-sm hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none active:shadow-lg transition duration-150 ease-in-out`}
+          className={`inline-block w-${width}  px-9 py-3 ${color} text-white font-medium leading-snug rounded shadow-sm hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none active:shadow-lg transition duration-150 ease-in-out`}
           onClick={onClick}
         >
           {children}

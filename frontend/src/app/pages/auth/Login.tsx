@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { Button, Input } from "../../components/shared";
 
 const Login = () => {
+  const submitButton = () => {
+    console.log("Login button onClick working");
+  };
+
   return (
     <div className="flex h-10/12 justify-center items-center">
       <div className="card bg-base-100 shadow-xl">
@@ -28,7 +32,9 @@ const Login = () => {
             </div>
 
             <div className="mb-5">
-              <Button width="32rem">Submit</Button>
+              <Button width={380} onClick={submitButton}>
+                Submit
+              </Button>
             </div>
           </form>
 
@@ -41,7 +47,7 @@ const Login = () => {
             </span>
           </p>
 
-          <div className="divider">OR</div>
+          <div className="divider">or</div>
           {/* <button
                     onClick={() => signInWithGoogle()}
                     className="btn btn-outline"
