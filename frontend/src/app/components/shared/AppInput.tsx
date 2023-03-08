@@ -20,8 +20,7 @@ const AppInput = ({
   readOnly = false,
 }: Props) => {
   return (
-    // <div>
-    <div className="" style={{ width: width }}>
+    <div style={{ width: width }}>
       {label && <label className="font-medium">{label}</label>}
 
       <input
@@ -30,10 +29,9 @@ const AppInput = ({
         height={height}
         readOnly={readOnly}
         placeholder={placeholder}
-        className={`w-full h-[${height}] rounded-md border-${borderColor} bg-white  py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
+        className={`w-full h-[${height}] rounded-md border-${borderColor} bg-white mt-1 py-3 px-6 text-base outline-none focus:border-primary focus:shadow-sm border-2`}
       />
     </div>
-    // </div>
   );
 };
 
